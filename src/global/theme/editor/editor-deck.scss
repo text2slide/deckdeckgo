@@ -1,0 +1,74 @@
+deckgo-deck {
+	--padding-end: 64px;
+
+	font-family: var(--font-family-default);
+
+	h1,
+	h2,
+	h3,
+	section,
+	ol,
+	ul,
+	deckgo-reveal-list,
+	deckgo-math,
+	deckgo-word-cloud,
+	deckgo-markdown {
+		border: 1px solid var(--ion-color-light);
+	}
+
+	h1:empty,
+	h2:empty,
+	h3:empty,
+	section:empty {
+		padding-bottom: 8px;
+	}
+
+	deckgo-highlight-code {
+		code[slot] {
+			min-height: 20px;
+
+			font-size: var(--deckgo-highlight-code-font-size);
+			font-family: var(--deckgo-highlight-code-font-family, monospace);
+		}
+	}
+
+	deckgo-math,
+	deckgo-markdown {
+		code[slot],
+		div[slot] {
+			min-height: 23px;
+		}
+	}
+
+	deckgo-math,
+	deckgo-word-cloud,
+	deckgo-markdown {
+		code,
+		div {
+			font-family: inherit;
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+
+	deckgo-drr {
+		section {
+			border: none;
+		}
+	}
+
+	deckgo-drr-text {
+		section {
+			display: inline-block;
+			width: 100%;
+			height: auto;
+			border: none;
+			ul,
+			ol {
+				border: none;
+			}
+		}
+	}
+}

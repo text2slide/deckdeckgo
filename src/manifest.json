@@ -1,0 +1,43 @@
+{
+  "name": "DeckDeckGo",
+  "short_name": "DeckDeckGo",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#3a81fe",
+  "scope": "/",
+  "start_url": "/",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "./assets/favicon/icon-default-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/favicon/icon-default-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "src": "./assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "src": "./assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Presentations",
+      "short_name": "Presentations",
+      "description": "Access your presentations",
+      "url": "/decks",
+      "icons": [{"src": "./assets/favicon/shortcut-decks-192x192.png", "sizes": "192x192"}]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="ppwork-outlined-brackets-square" class="svg-inline--fa fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 145.104 85" fill="transparent" stroke="#000">
+  <g transform="translate(-739 -749)">
+    <g>
+      <line x1="7" transform="translate(739.5 749.5)" stroke-linecap="square"/>
+      <line y1="84" transform="translate(739.5 749.5)"/>
+      <line x1="7" transform="translate(739.5 833.5)" stroke-linecap="square"/>
+    </g>
+    <g transform="translate(1623.104 1583) rotate(180)">
+      <line x1="7" transform="translate(739.5 749.5)" stroke-linecap="square"/>
+      <line y1="84" transform="translate(739.5 749.5)"/>
+      <line x1="7" transform="translate(739.5 833.5)" stroke-linecap="square"/>
+    </g>
+  </g>
+</svg>

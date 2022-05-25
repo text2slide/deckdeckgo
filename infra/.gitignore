@@ -1,5 +1,0 @@
-.pgdata
-.dynamodb.pid
-.s3.pid
-.sqs.pid
-shared-local-instance.db

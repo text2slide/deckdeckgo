@@ -1,0 +1,19 @@
+app-deck-pagenumber {
+	div.device {
+		display: flex;
+		justify-content: center;
+		margin: 8px 0 0;
+
+		ion-segment {
+			width: fit-content;
+			background: transparent;
+
+			ion-segment-button {
+				--indicator-color: var(--ion-color-dark);
+				--color-checked: white;
+				--color-hover: black;
+				--border-radius: 12px;
+			}
+		}
+	}
+}

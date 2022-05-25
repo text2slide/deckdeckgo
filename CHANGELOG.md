@@ -1,1891 +1,803 @@
-<a name="7.1.0"></a>
+# 5.X.Y (2022-AA-BB)
 
-# [7.1.0](https://github.com/deckgo/deckdeckgo/compare/v7.0.1...v7.1.0) (2022-XX-YY)
+### Features
 
-### Providers
+- on import (open) of .ddg files, always generate new data (new ids for the decks, slides, docs and paragraphs)
 
-- sync: v0.0.27 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/offline/CHANGELOG.md))
+# 5.2.0 (2021-12-24)
 
-### Web Components:
+### Features - IC
 
-- lazy-img: v3.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- studio: v0.0.19 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/studio/CHANGELOG.md))
+- publish docs / blog posts to PWA on the IC 🔥
+- delete published content upon delete deck or doc data too
+- canonical url option for published documents
 
-<a name="7.0.1"></a>
+### Features
 
-# [7.0.1](https://github.com/deckgo/deckdeckgo/compare/v7.0.0...v7.0.1) (2022-05-04)
+- navigation actions (open, export, etc.) moved to start position
+- deck and doc title displayed in the browser tab (`document.title`)
+- `<hr/>` can be added to documents
+- custom undo-redo for documents (still in progress!)
+- inline editor display above (not under) selection
 
-### Providers
+### Fix
 
-- sync: v0.0.24 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/offline/CHANGELOG.md))
+- update `meta` information to offline data after publish
+- global deck state not initialized on did load
+- storage urls on the IC (no more `//`)
+- catch tab only in edited container
+- random (tenor) gif display
+- remove event listeners on navigation
+- backwards (before docs introduction) compatibility for sync job
 
-### Others
+# 5.1.0 (2021-12-03)
 
-- editor: v7.10.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/editor/CHANGELOG.md))
+### Features - IC
 
-<a name="7.0.0"></a>
+- publish presentations to PWA including new overview page
+- templates support
+- storage administration
+- delete users and canisters
 
-# [7.0.0](https://github.com/deckgo/deckdeckgo/compare/v6.0.0...v7.0.0) (2022-04-15)
+### Features
 
-### Applications
+- introduces an auth state for initialization that takes some time
+- add refresh option to storage files page
 
-- studio: v6.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+### Fix
 
-### Providers: New
+- load storage files (in dedicated page) when auth ready
 
-- offline: v0.0.6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/offline/CHANGELOG.md))
-- sync: v0.0.22 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/offline/CHANGELOG.md))
+# 5.0.1 (2021-10-21)
 
-### Providers
+### Features
 
-- firebase: v4.1.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/firebase/CHANGELOG.md))
+- rename entry `deck.json` to `data.json` in file `.ddg`
 
-### Providers: Deprecated and integrated into `papyrs`
+# 5.0.0 (2021-10-21)
 
-- ic
+### Features
 
-### Web Components: New
+- offline first ([v5.0.0](https://github.com/deckgo/deckdeckgo/milestone/55?closed=1))
 
-- studio: v0.0.17 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/studio/CHANGELOG.md))
+# 4.10.0 (2021-09-04)
 
-### Web Components:
+### Features
 
-- core: v10.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v4.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- lazy-img: v3.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- monaco-editor: v1.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/monaco-editor/CHANGELOG.md))
-- social-img: v1.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/elements/CHANGELOG.md))
+- cuter default charts colors ([#1315](https://github.com/deckgo/deckdeckgo/pull/1315))
 
-### Others
+### Fix
 
-- deck-utils: v7.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- editor: v7.9.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/editor/CHANGELOG.md))
-- styles: v1.4.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/styles/CHANGELOG.md))
+- slide navigation and selection from new aside menu ([#1316](https://github.com/deckgo/deckdeckgo/pull/1316))
+- lazy load local thumbnails slides' images and charts ([#1311](https://github.com/deckgo/deckdeckgo/pull/1311))
 
-<a name="6.0.0"></a>
+# 4.9.0 (2021-08-20)
 
-# [6.0.0](https://github.com/deckgo/deckdeckgo/compare/v5.2.0...v6.0.0) (2022-02-04)
+### Features
 
-Breaking change: [DeckDeckGo.com](https://deckdeckgo.com) experimental support for documents reverted
+- slides thumbnails on large screen ([#1294](https://github.com/deckgo/deckdeckgo/pull/1294), [#1295](https://github.com/deckgo/deckdeckgo/pull/1295), [#1296](https://github.com/deckgo/deckdeckgo/pull/1296) and [#1300](https://github.com/deckgo/deckdeckgo/pull/1300))
+- add new slide as next slide, not last ([#1297](https://github.com/deckgo/deckdeckgo/pull/1297))
+- select deck with additional click on editor ([#1211](https://github.com/deckgo/deckdeckgo/issues/1211))
+- remove sign in / out from side menu ([#1301](https://github.com/deckgo/deckdeckgo/pull/1301))
+- remove ready to publish cta in nav bar ([#1299](https://github.com/deckgo/deckdeckgo/pull/1299))
+- improve app first render ([#1291](https://github.com/deckgo/deckdeckgo/pull/1291))
+- optional config (tenor, unsplash and mock) ([#1239](https://github.com/deckgo/deckdeckgo/pull/1239))
 
-### Applications
+### Refactoring
 
-- studio: v5.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- remote: v1.15.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
+- move firestore prepareAttributes ([#1254](https://github.com/deckgo/deckdeckgo/pull/1254))
+- move env service to parent folder ([#1240](https://github.com/deckgo/deckdeckgo/pull/1240))
 
-### Providers
+### Fix
 
-- firebase: v3.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/firebase/CHANGELOG.md))
+- remove svg titles ([#1222](https://github.com/deckgo/deckdeckgo/pull/1222))
+- create slide select elements ([#1212](https://github.com/deckgo/deckdeckgo/pull/1212))
 
-### Web Components: Deprecated and integrated into `stylo`
+# 4.8.0 (2021-06-13)
 
-- color
-- inline-editor
+### Features
 
-### Web Components: New
+- "undo / redo" support for attribute and style changes ([#1175](https://github.com/deckgo/deckdeckgo/pull/1175))
+- dismiss low contrast warning ([#1064](https://github.com/deckgo/deckdeckgo/issues/1064))
+- add "customization" and "templates" links to top right menu ([#1200](https://github.com/deckgo/deckdeckgo/pull/1200))
 
-- monaco-editor: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/monaco-editor/CHANGELOG.md))
+### Fix
 
-### Web Components
+- dashboard and templates grid for wide screen ([#1201](https://github.com/deckgo/deckdeckgo/issues/1201https://github.com/deckgo/deckdeckgo/issues/1201))
+- custom user templates without (editable) slots ([#1197](https://github.com/deckgo/deckdeckgo/pull/1197))
+- select element on tab and deck on escape ([#1194](https://github.com/deckgo/deckdeckgo/pull/1194))
 
-- highlight-code: v4.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- markdown: v2.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/markdown/CHANGELOG.md))
+# 4.7.0 (2021-05-29)
 
-### Others
+### Features
 
-- utils: v5.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
+- highlight code animation revisited ([#1171](https://github.com/deckgo/deckdeckgo/pull/1171))
+- font size users' editable ([#1160](https://github.com/deckgo/deckdeckgo/pull/1160))
+- toggle content editable drag drop resize ([#1180](https://github.com/deckgo/deckdeckgo/pull/1180))
 
-<a name="5.2.0"></a>
+### Fix
 
-# [5.2.0](https://github.com/deckgo/deckdeckgo/compare/v5.1.0...v5.2.0) (2021-12-24)
+- sync reveal state with remote ([#1187](https://github.com/deckgo/deckdeckgo/pull/1187))
+- events are thrown outside main ref too ([#1172](https://github.com/deckgo/deckdeckgo/pull/1172))
 
-### Applications
+# 4.6.0 (2021-05-09)
 
-- studio: v5.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- remote: v1.15.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- docs: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
+### Features
 
-### Providers
+- inline editor improvements: stay open on changes, color can be entered with an input and redo/undo supported
+- laser pointer as cursor in fullscreen mode
 
-- firebase: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/firebase/CHANGELOG.md))
-- ic: v4.1.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/ic/CHANGELOG.md))
+# 4.5.0 (2021-04-03)
 
-### Web Components
+### Features
 
-- inline-editor: v5.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
+- figma integration ([#246](https://github.com/deckgo/deckdeckgo/issues/246))
+- german translations ([#1122](https://github.com/deckgo/deckdeckgo/issues/1122) and [#1123](https://github.com/deckgo/deckdeckgo/issues/1123))
+- accept images svg and webp ([#1113](https://github.com/deckgo/deckdeckgo/pull/1113))
+- csp object-src and base-uri ([#1111](https://github.com/deckgo/deckdeckgo/pull/1111))
 
-### Web Components: New
+# 4.4.0 (2021-03-18)
 
-- elements: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/elements/CHANGELOG.md))
-- social-img: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/elements/CHANGELOG.md))
+### Features
 
-### Web Components: Deprecated and moved to `elements`
+- spanish translations ([#360](https://github.com/deckgo/deckdeckgo/issues/360))
 
-- youtube
-- social
-- reveal
-- demo
-- qrcode
+### Fix
 
-### Others: New
+- unable to go offline ([#1104](https://github.com/deckgo/deckdeckgo/issues/1104))
+- notes encoding text incorrectly ([#1105](https://github.com/deckgo/deckdeckgo/issues/1105))
 
-- styles: v1.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/styles/CHANGELOG.md))
+# 4.3.0 (2021-03-12)
 
-### Others
+### Features
 
-- deck-utils: v6.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- IC kit: v1.2.1 ([CHANGELOG](https://github.com/deckgo/ic-kit/blob/master/CHANGELOG.md))
-- kit: v5.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/kit/CHANGELOG.md))
-- editor: v6.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/editor/CHANGELOG.md))
-- utils: v3.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
+- i18n ([#370](https://github.com/deckgo/deckdeckgo/issues/370))
+- toggle slide type on the fly ([#251](https://github.com/deckgo/deckdeckgo/issues/251))
+- do not fetch code language list at runtime to improve performance ([#1083](https://github.com/deckgo/deckdeckgo/issues/1083))
+- add telegram to web-social-share options ([#1090](https://github.com/deckgo/deckdeckgo/issues/1090))
 
-<a name="5.1.0"></a>
+### Fix
 
-# [5.1.0](https://github.com/deckgo/deckdeckgo/compare/v5.0.1...v5.1.0) (2021-12-03)
+- notes not persisted - listener has to be attached higher ([#1102](https://github.com/deckgo/deckdeckgo/pull/1102))
+- support swipe for templates with custom names ([#1079](https://github.com/deckgo/deckdeckgo/pull/1079))
+- custom templates names ([#1086](https://github.com/deckgo/deckdeckgo/pull/1086))
+- main deck selector to go offline ([#1088](https://github.com/deckgo/deckdeckgo/pull/1088))
+- low contrast warning ([#1094](https://github.com/deckgo/deckdeckgo/pull/1094))
+- publish action disable state ([#1095](https://github.com/deckgo/deckdeckgo/issues/1095))
 
-### Applications
+# 4.2.0 (2021-02-10)
 
-- studio: v5.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- remote: v1.15.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
+### Features
 
-### Providers
+- user and community templates ([#1031](https://github.com/deckgo/deckdeckgo/pull/1031) and [#1056](https://github.com/deckgo/deckdeckgo/pull/1056))
+- new default template with content aligned at the bottom of the slide ([#1073](https://github.com/deckgo/deckdeckgo/pull/1073))
+- edit with default tool or with CSS ([#1066](https://github.com/deckgo/deckdeckgo/pull/1066))
+- copy and paste elements style ("format painter") ([#1071](https://github.com/deckgo/deckdeckgo/pull/1071))
+- width, rotate and padding options for elements ([#1070](https://github.com/deckgo/deckdeckgo/pull/1070))
+- keep track of panel state open or close ([#1065](https://github.com/deckgo/deckdeckgo/pull/1065))
+- minimum six slides, instead of four, to appear in "discover" section ([#1068](https://github.com/deckgo/deckdeckgo/pull/1068))
+- handle assets with store ([#1065](https://github.com/deckgo/deckdeckgo/pull/1062))
 
-- api: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/api/CHANGELOG.md))
-- firebase: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/firebase/CHANGELOG.md))
-- ic: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/ic/CHANGELOG.md))
+### Style
 
-### Web Components
+- new design of the editor's tools ([#1069](https://github.com/deckgo/deckdeckgo/pull/1069))
 
-- core: v9.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v3.6.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
+### Fix
 
-### Others: NEW
+- preview code block update ([#1067](https://github.com/deckgo/deckdeckgo/pull/1067))
+- navigate contact ([#1055](https://github.com/deckgo/deckdeckgo/pull/1055))
 
-- IC kit: v1.0.0 ([CHANGELOG](https://github.com/deckgo/ic-kit/blob/master/CHANGELOG.md))
+# 4.1.0 (2021-01-14)
 
-### Others
+### Features
 
-- deck-utils: v5.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- editor: v3.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/editor/CHANGELOG.md))
-- kit: v4.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/kit/CHANGELOG.md))
-- gatsby-remark-highlight-code: v3.1.0 ([CHANGELOG](https://github.com/deckgo/gatsby-remark-highlight-code/blob/master/CHANGELOG.md))
-- utils: v2.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
+- add option to not display the toolbar on code block
+- highlight code editing less quirky
+- do not supercharge paste action anymore
 
-<a name="5.0.1"></a>
+### Fix
 
-# [5.0.1](https://github.com/deckgo/deckdeckgo/compare/v5.0.0...v5.0.1) (2021-10-29)
+- undefined reference in preview
 
-### Applications
+### Refactor
 
-- studio: v5.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+- rename files with `.ts` instead of `.tsx`
 
-### Web Components
+# 4.0.0 (2020-12-23)
 
-- drag-resize-rotate: v2.2.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/drag-resize-rotate/CHANGELOG.md))
-- highlight-code: v3.4.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v4.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md)
+### Features
 
-### Others
+- remove landing, discover, feed and all static pages from studio to split the site (landing) and editor (app) in two separate applications
 
-- deck-utils: v4.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- utils: v2.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
+# 3.2.1 (2020-12-16)
 
-<a name="5.0.0"></a>
+### Features
 
-# [5.0.0](https://github.com/deckgo/deckdeckgo/compare/v4.10.0...v5.0.0) (2021-10-21)
+- disable spellcheck in fullscreen ([#264](https://github.com/deckgo/deckdeckgo/issues/264))
+- split settings in two routes customization and profile ([#1028](https://github.com/deckgo/deckdeckgo/pull/1028))
+- goodfirms featured story ([#1033](https://github.com/deckgo/deckdeckgo/pull/1033))
+- avatar display and size in menu ([#1029](https://github.com/deckgo/deckdeckgo/pull/1029))
+- display brand name in navigation offline ([#1025](https://github.com/deckgo/deckdeckgo/pull/1025))
+- update robots.txt ([#1030](https://github.com/deckgo/deckdeckgo/issues/1030))
 
-### Applications
+# 3.2.0 (2020-11-28)
 
-- remote: v1.14.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v5.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+### Features
 
-### Providers: New
+- fullscreen and remote together under a new "present" panel ([#1020](https://github.com/deckgo/deckdeckgo/pull/1020))
+- offline: download backup ([#1015](https://github.com/deckgo/deckdeckgo/issues/1015))
 
-- api: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/api/CHANGELOG.md))
-- firebase: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/firebase/CHANGELOG.md))
-- ic: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/providers/ic/CHANGELOG.md))
+### Fix
 
-### Utils: New
+- offline: header and footer if not defined
+- offline: firestore delete fields comparison
 
-- editor: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/editor/CHANGELOG.md))
+# 3.1.0 (2020-11-22)
 
-### Others
+### Features
 
-- figma-deckdeckgo-plugin: v2.0.0 ([CHANGELOG](https://github.com/deckgo/figma-deckdeckgo-plugin/blob/main/CHANGELOG.md))
-- utils: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
+- markdown ([#996](https://github.com/deckgo/deckdeckgo/issues/996))
+- preview slide when editing markdown, code and math ([#1013](https://github.com/deckgo/deckdeckgo/pull/1013))
+- backup firestore once a day ([#1016](https://github.com/deckgo/deckdeckgo/pull/1016))
+- optionally skip second element in create slide title or content ([#1010](https://github.com/deckgo/deckdeckgo/pull/1010))
+- text made selectable in published slides ([#1008](https://github.com/deckgo/deckdeckgo/pull/1008), [#1006](https://github.com/deckgo/deckdeckgo/pull/1006) and [#1009](https://github.com/deckgo/deckdeckgo/pull/1009))
+- allow any https images ([#1004](https://github.com/deckgo/deckdeckgo/pull/1004))
+- improve img lazy loading ([#1000](https://github.com/deckgo/deckdeckgo/pull/1000))
+- improve font color focus state ([#999](https://github.com/deckgo/deckdeckgo/pull/999))
+- colors in studio do not show focus outline ([#997](https://github.com/deckgo/deckdeckgo/issues/997))
+- display information if publish failed ([#989](https://github.com/deckgo/deckdeckgo/pull/989))
 
-<a name="4.10.0"></a>
+### Fix
 
-# [4.10.0](https://github.com/deckgo/deckdeckgo/compare/v4.9.0...v4.10.0) (2021-09-04)
+- offline user was not able to go back online ([#1014](https://github.com/deckgo/deckdeckgo/issues/1014))
 
-### Applications
+# 3.0.0 (2020-10-29)
 
-- demo: v8.3.3 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- remote: v1.14.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v4.10.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+### Features
 
-### Web Components: Templates
+- papyrus and vertical ([#871](https://github.com/deckgo/deckdeckgo/issues/871))
+- waves ([#874](https://github.com/deckgo/deckdeckgo/issues/874))
+- word cloud ([#696](https://github.com/deckgo/deckdeckgo/issues/696))
+- box shadow ([#881](https://github.com/deckgo/deckdeckgo/issues/881))
+- letter spacing ([#888](https://github.com/deckgo/deckdeckgo/issues/888))
+- border radius ([#865](https://github.com/deckgo/deckdeckgo/issues/865))
+- auto slide ([#890](https://github.com/deckgo/deckdeckgo/issues/890))
+- more list style ([#705](https://github.com/deckgo/deckdeckgo/issues/705))
+- aspect ratio set to 16/9 (except on mobile) ([#967](https://github.com/deckgo/deckdeckgo/pull/967))
+- improve poll UX to support multiple polls within the same presentation ([#942](https://github.com/deckgo/deckdeckgo/issues/942))
+- animate style options of revealed elements ([#236](https://github.com/deckgo/deckdeckgo/issues/236))
+- fullscreen enter hide mouse more quickly ([#963](https://github.com/deckgo/deckdeckgo/pull/963))
+- fullscreen editor v2 ([#901](https://github.com/deckgo/deckdeckgo/issues/901))
+- color picker v2 ([#919](https://github.com/deckgo/deckdeckgo/issues/919))
+- save used colors as history ([#902](https://github.com/deckgo/deckdeckgo/issues/902))
+- display regions in services list ([#856](https://github.com/deckgo/deckdeckgo/issues/856))
+- lighthouse metrics and transition fade ([#877](https://github.com/deckgo/deckdeckgo/issues/877))
 
-- slide-chart: v2.5.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
+### Fix
 
-### Web Components
+- some non descriptive icon titles are shown when hovering toolbar options ([#822](https://github.com/deckgo/deckdeckgo/issues/822))
+- color picker does not show focus state ([#922](https://github.com/deckgo/deckdeckgo/issues/922))
+- missing CSS overflow hidden in list of fonts ([#882](https://github.com/deckgo/deckdeckgo/issues/882))
+- anonymous user can add up to three slides to give a try to the editor ([#878](https://github.com/deckgo/deckdeckgo/issues/878))
+- improve performance by better detecting all slides effectively loaded ([#884](https://github.com/deckgo/deckdeckgo/issues/884))
 
-- charts: v2.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- highlight-code: v3.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- lazy-img: v3.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- word-cloud: v1.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/word-cloud/CHANGELOG.md))
+### Build
 
-<a name="4.9.0"></a>
+- Workbox v5 ([#691](https://github.com/deckgo/deckdeckgo/issues/691))
+- Firebase JavaScript v8 ([#976](https://github.com/deckgo/deckdeckgo/pull/976))
+- rm www before build ([#879](https://github.com/deckgo/deckdeckgo/issues/879))
 
-# [4.9.0](https://github.com/deckgo/deckdeckgo/compare/v4.8.0...v4.9.0) (2021-08-20)
+### Refactor
 
-### Applications
+- optional chaining ([#920](https://github.com/deckgo/deckdeckgo/issues/920))
+- add rel to links ([#940](https://github.com/deckgo/deckdeckgo/pull/940))
 
-- remote: v1.14.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v4.9.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+# 2.3.0 (2020-09-06)
 
-### Web Components
+### Features
 
-- core: v8.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v3.3.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
+- publish presentations source code to GitHub ([#851](https://github.com/deckgo/deckdeckgo/pull/851))
+- highlight why "publish" action would be disabled ([#613](https://github.com/deckgo/deckdeckgo/issues/613))
+- new staging environment ([#850](https://github.com/deckgo/deckdeckgo/pull/850))
+- make lighthouse happy ([#847](https://github.com/deckgo/deckdeckgo/pull/847))
+- update dependencies including all Web Components build with Stencil v2 ([#858](https://github.com/deckgo/deckdeckgo/issues/858))
+- upgrade to Stencil v2 ([#858](https://github.com/deckgo/deckdeckgo/issues/858))
+- prompt user to reload when an update is available ([#868](https://github.com/deckgo/deckdeckgo/pull/868))
 
-### Others
+### Style
 
-- deck-utils: v4.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
+- less christmassy landing drawings ([#855](https://github.com/deckgo/deckdeckgo/pull/855))
 
-<a name="4.8.0"></a>
+### Fix
 
-# [4.8.0](https://github.com/deckgo/deckdeckgo/compare/v4.7.0...v4.8.0) (2021-06-13)
+- hide placeholder in fullscreen mode if idle ([#854](https://github.com/deckgo/deckdeckgo/pull/854))
+- update `@deckdeckgo/highlight-code` ([#848](https://github.com/deckgo/deckdeckgo/issues/848))
+- API crash on unique constraint ([#858](https://github.com/deckgo/deckdeckgo/issues/859))
 
-### Applications
+# 2.2.0 (2020-08-17)
 
-- studio: v4.8.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+### Features
 
-### Others
+- add warning when colors do not meet contrast ratio (a11y, [#819](https://github.com/deckgo/deckdeckgo/issues/819))
+- custom inline editor execCommand implementation ([#741](https://github.com/deckgo/deckdeckgo/issues/741))
+- share on feed page and add twitter tags ([#824](https://github.com/deckgo/deckdeckgo/pull/824))
+- improve web caching ([#840](https://github.com/deckgo/deckdeckgo/pull/840))
+- hide the pager ([#835](https://github.com/deckgo/deckdeckgo/pull/835))
+- only one h1 on the landing page (Google SEO friendly, [#834](https://github.com/deckgo/deckdeckgo/pull/834))
+- display a message in the console when cannot be use in Firefox Private Window ([#827](https://github.com/deckgo/deckdeckgo/issues/827))
+- update dependencies and firebase ui ([#829](https://github.com/deckgo/deckdeckgo/pull/829))
+- remove old ionic / chrome resize issue workaround ([#327](https://github.com/deckgo/deckdeckgo/issues/327))
 
-- template kit: v1.1.0 ([CHANGELOG](https://github.com/deckgo/template-kit/blob/master/CHANGELOG.md))
+### Fix
 
-<a name="4.7.0"></a>
+- toolbar options skips some options (a11y, [#811](https://github.com/deckgo/deckdeckgo/issues/821))
+- unhandled and unexpected add slide ([#830](https://github.com/deckgo/deckdeckgo/pull/830))
+- adjust copy enterprise ([#823](https://github.com/deckgo/deckdeckgo/pull/823))
 
-# [4.7.0](https://github.com/deckgo/deckdeckgo/compare/v4.6.0...v4.7.0) (2021-05-29)
+# 2.1.0 (2020-07-30)
 
-### Applications
+### Features
 
-- demo: v8.3.2 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- remote: v1.14.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v4.7.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+- enterprise: new dedicated page, improved navigation and press update ([#820](https://github.com/deckgo/deckdeckgo/pull/820))
 
-### Web Components Templates
+### Fix
 
-- slide-code: **DEPRECATED**
+- social icons are not shown ([#814](https://github.com/deckgo/deckdeckgo/issues/814))
+- add rel to outgoing links for security reasons ([#815](https://github.com/deckgo/deckdeckgo/issues/815))
+- aria-labels are incorrectly implemented (typo) ([#812](https://github.com/deckgo/deckdeckgo/issues/812))
 
-The "code" template is not used in our web editor and, is really rarely used in starter apps.
-To showcase code, the component `@deckdeckgo/highlight-code` is always used with blocks of code.
-Therefore, to simplify the code base, I deprecate this template.
+# 2.0.0 (2020-07-23)
 
-- slide-aspect-ratio: v3.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/aspect-ratio/CHANGELOG.md))
-- slide-author: v2.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/author/CHANGELOG.md))
-- slide-chart: v2.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-content: v2.5.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/content/CHANGELOG.md))
-- slide-gif: v3.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/gif/CHANGELOG.md))
-- slide-playground: v2.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/playground/CHANGELOG.md))
-- slide-poll: v2.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/poll/CHANGELOG.md))
-- slide-qrcode: v2.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-split: v2.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-- slide-title: v2.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/title/CHANGELOG.md))
-- slide-youtube: v2.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
+### Features
 
-### Web Components
+- header and footer ([#794](https://github.com/deckgo/deckdeckgo/pull/794), [#791](https://github.com/deckgo/deckdeckgo/pull/791), [#793](https://github.com/deckgo/deckdeckgo/pull/793), [#792](https://github.com/deckgo/deckdeckgo/pull/792))
+- floating editable text for diagrams ([#799](https://github.com/deckgo/deckdeckgo/pull/799))
+- background color options for selected text ([#805](https://github.com/deckgo/deckdeckgo/pull/805))
+- self host Google Fonts to improve load time ([#796](https://github.com/deckgo/deckdeckgo/pull/796))
+- shorten default full url displayed social text ([#789](https://github.com/deckgo/deckdeckgo/pull/789))
 
-- charts: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- color: v4.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- core: v8.2.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- demo: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/demo/CHANGELOG.md))
-- drag-resize-rotate: v2.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/drag-resize-rotate/CHANGELOG.md))
-- inline-editor: v4.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- highlight-code: v3.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- laser-pointer: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/laser-pointer/CHANGELOG.md))
-- lazy-img: v3.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- markdown: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/markdown/CHANGELOG.md))
-- math: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/math/CHANGELOG.md))
-- pager: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/pager/CHANGELOG.md))
-- qrcode: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-- remote: v2.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- reveal: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/reveal/CHANGELOG.md))
-- social: v4.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/social/CHANGELOG.md))
-- word-cloud: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/word-cloud/CHANGELOG.md))
-- youtube: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/youtube/CHANGELOG.md))
+### Style
 
-### Others
+- box popover options to improve readability ([#790](https://github.com/deckgo/deckdeckgo/pull/790), [#786](https://github.com/deckgo/deckdeckgo/pull/786))
+- highlight code scrollbar (overflow-y) set to auto instead of scroll ([#781](https://github.com/deckgo/deckdeckgo/pull/781))
 
-- cloud: v2.2.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cloud/CHANGELOG.md))
-- deck-utils: v4.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- kit: v4.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/kit/CHANGELOG.md))
-- utils: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-- remote-utils: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/remote/CHANGELOG.md))
-- slide-utils: v4.0.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- starter kit: v8.3.2 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- studio kit: v8.3.2 ([CHANGELOG](https://github.com/deckgo/studio-kit/blob/master/CHANGELOG.md))
-- types: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
+### Fix
 
-<a name="4.6.0"></a>
-
-# [4.6.0](https://github.com/deckgo/deckdeckgo/compare/v4.5.0...v4.6.0) (2021-05-09)
-
-### Applications
-
-- docs: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- studio: v4.6.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components: New
-
-- laser-pointer: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/laser-pointer/CHANGELOG.md))
-
-### Web Components
-
-- color: v4.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- core: v8.1.6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v2.6.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v4.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- markdown: v2.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/markdown/CHANGELOG.md))
-
-### Others
-
-- demo: v8.1.0 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- kit: v3.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/kit/CHANGELOG.md))
-- starter kit: v8.1.0 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- studio kit: v8.1.0 ([CHANGELOG](https://github.com/deckgo/studio-kit/blob/master/CHANGELOG.md))
-- utils: v1.8.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-
-<a name="4.5.0"></a>
-
-# [4.5.0](https://github.com/deckgo/deckdeckgo/compare/v4.4.0...v4.5.0) (2021-04-06)
-
-### Applications
-
-- demo: v8.0.0 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- site: v1.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/site/CHANGELOG.md))
-- studio: v4.5.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- remote: v1.13.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-
-### Web Components
-
-- core: v8.1.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-### Web Components Templates
-
-- slide-aspect-ratio: v3.2.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/aspect-ratio/CHANGELOG.md))
-
-### Others: New
-
-- figma-deckdeckgo-plugin: v1.0.2 ([CHANGELOG](https://github.com/deckgo/figma-deckdeckgo-plugin/blob/main/CHANGELOG.md))
-
-### Others
-
-- cli: v3.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cli/CHANGELOG.md))
-- cloud: v2.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cloud/CHANGELOG.md))
-- deck-utils: v3.4.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- kit: v3.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/kit/CHANGELOG.md))
-- starter kit: v8.0.0 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- studio kit: v8.0.1 ([CHANGELOG](https://github.com/deckgo/studio-kit/blob/master/CHANGELOG.md))
-
-<a name="4.4.0"></a>
-
-# [4.4.0](https://github.com/deckgo/deckdeckgo/compare/v4.3.0...v4.4.0) (2021-03-18)
-
-### Applications
-
-- studio: v4.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-<a name="4.3.0"></a>
-
-# [4.3.0](https://github.com/deckgo/deckdeckgo/compare/v4.2.0...v4.3.0) (2021-03-12)
-
-### Applications
-
-- docs: v2.9.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- studio: v4.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- core: v8.1.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v2.5.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-
-### Others
-
-- cli: v2.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cli/CHANGELOG.md))
-- deck-utils: v3.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- kit: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/kit/CHANGELOG.md))
-- starter kit: v7.1.5 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- studio kit: v7.2.1 ([CHANGELOG](https://github.com/deckgo/studio-kit/blob/master/CHANGELOG.md))
-- infra: upgrade PG (v9.6 to v12.5)
-
-<a name="4.2.0"></a>
-
-# [4.2.0](https://github.com/deckgo/deckdeckgo/compare/v4.1.0...v4.2.0) (2020-02-14)
-
-### Applications
-
-- demo: v7.1.2 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- studio: v4.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- core: v8.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v2.3.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-
-### Web Components: Templates
-
-- slide-content: v2.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/content/CHANGELOG.md))
-
-### Others: New
-
-- template kit: v1.0.0 ([CHANGELOG](https://github.com/deckgo/template-kit/blob/master/CHANGELOG.md))
-
-### Others
-
-- cli: v2.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cli/CHANGELOG.md))
-- cloud: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cloud/CHANGELOG.md))
-- deck-utils: v3.3.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- kit: v2.0.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/kit/CHANGELOG.md))
-- starter kit: v7.1.4 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- studio kit: v7.2.0 ([CHANGELOG](https://github.com/deckgo/studio-kit/blob/master/CHANGELOG.md))
-- utils: v1.8.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-- infra: drop static-haskell-nix and update nixpkgs
-
-<a name="4.1.0"></a>
-
-# [4.1.0](https://github.com/deckgo/deckdeckgo/compare/v4.0.0...v4.1.0) (2021-01-14)
-
-### Applications
-
-- docs: v2.9.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- site: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/site/CHANGELOG.md))
-- studio: v4.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- highlight-code: v2.3.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-
-### Web Components: Templates
-
-- slide-poll: v2.2.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/poll/CHANGELOG.md))
-
-<a name="4.0.0"></a>
-
-# [4.0.0](https://github.com/deckgo/deckdeckgo/compare/v3.2.1...v4.0.0) (2020-12-23)
-
-### Applications
-
-- studio: v4.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### New Applications
-
-- site: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/site/CHANGELOG.md))
-
-<a name="3.2.1"></a>
-
-# [3.2.1](https://github.com/deckgo/deckdeckgo/compare/v3.2.0...v3.2.1) (2020-12-16)
-
-### Applications
-
-- studio: v3.2.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- highlight-code: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-
-### Others
-
-- deck-utils: v3.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-
-<a name="3.2.0"></a>
-
-# [3.2.0](https://github.com/deckgo/deckdeckgo/compare/v3.1.0...v3.2.0) (2020-11-28)
-
-### Applications
-
-- studio: v3.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-<a name="3.1.0"></a>
-
-# [3.1.0](https://github.com/deckgo/deckdeckgo/compare/v3.0.0...v3.1.0) (2020-11-22)
-
-### Applications
-
-- demo: v7.1.1 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- docs: v2.9.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.13.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v3.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components Templates
-
-- slide-aspect-ratio: v3.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/aspect-ratio/CHANGELOG.md))
-- slide-author: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/author/CHANGELOG.md))
-- slide-big-img: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/big-img/CHANGELOG.md))
-- slide-chart: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-code: v3.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/code/CHANGELOG.md))
-- slide-content: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/content/CHANGELOG.md))
-- slide-countdown: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/countdown/CHANGELOG.md))
-- slide-gif: v3.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/gif/CHANGELOG.md))
-- slide-playground: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/playground/CHANGELOG.md))
-- slide-poll: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/poll/CHANGELOG.md))
-- slide-qrcode: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-split: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-- slide-title: v2.2.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/title/CHANGELOG.md))
-- slide-video: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/video/CHANGELOG.md))
-- slide-youtube: v2.2.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Web Components: New
-
-- markdown: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/markdown/CHANGELOG.md))
-
-### Web Components
-
-- core: v8.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v2.2.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- lazy-img: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-
-### Others: New
-
-- kit: v2.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/kit/CHANGELOG.md))
-
-### Others
-
-- deck-utils: v3.2.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- slide-utils: v2.6.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- starter kit: v7.1.3 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- studio kit: v7.1.3 ([CHANGELOG](https://github.com/deckgo/studio-kit/blob/master/CHANGELOG.md))
-- utils: v1.7.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-
-<a name="3.0.0"></a>
-
-# [3.0.0](https://github.com/deckgo/deckdeckgo/compare/v2.3.0...v3.0.0) (2020-10-29)
-
-### Applications
-
-- demo: v6.0.0 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- docs: v2.8.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.12.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components: New
-
-- pager: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/pager/CHANGELOG.md))
-- word-cloud: v1.0.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/word-cloud/CHANGELOG.md))
-- reveal: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/reveal/CHANGELOG.md))
-
-### Web Components Templates
-
-- slide-aspect-ratio: v3.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/aspect-ratio/CHANGELOG.md))
-- slide-author: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/author/CHANGELOG.md))
-- slide-big-img: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/big-img/CHANGELOG.md))
-- slide-chart: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-code: v3.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/code/CHANGELOG.md))
-- slide-content: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/content/CHANGELOG.md))
-- slide-countdown: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/countdown/CHANGELOG.md))
-- slide-gif: v3.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/gif/CHANGELOG.md))
-- slide-playground: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/playground/CHANGELOG.md))
-- slide-poll: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/poll/CHANGELOG.md))
-- slide-qrcode: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-split: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-- slide-title: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/title/CHANGELOG.md))
-- slide-video: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/video/CHANGELOG.md))
-- slide-youtube: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Web Components
-
-- charts: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- color: v3.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- core: v8.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- demo: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/demo/CHANGELOG.md))
-- drag-resize-rotate: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/drag-resize-rotate/CHANGELOG.md))
-- highlight-code: v2.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v3.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- math: v2.0.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/math/CHANGELOG.md))
-- qrcode: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-- remote: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- social: v4.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/social/CHANGELOG.md))
-- youtube: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/youtube/CHANGELOG.md))
-
-### Others
-
-- cli: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cli/CHANGELOG.md))
-- deck-utils: v3.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- slide-utils: v2.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- starter kit: v6.1.0 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- studio kit: v6.2.0 ([CHANGELOG](https://github.com/deckgo/studio-kit/blob/master/CHANGELOG.md))
-- webpack: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webpack/CHANGELOG.md))
-
-<a name="2.3.0"></a>
-
-# [2.3.0](https://github.com/deckgo/deckdeckgo/compare/v2.2.0...v2.3.0) (2020-09-06)
-
-### Applications
-
-- demo: v4.0.0 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- docs: v1.9.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.6.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v2.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components Templates
-
-- slide-aspect-ratio: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/aspect-ratio/CHANGELOG.md))
-- slide-author: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/author/CHANGELOG.md))
-- slide-big-img: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/big-img/CHANGELOG.md))
-- slide-chart: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-code: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/code/CHANGELOG.md))
-- slide-content: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/content/CHANGELOG.md))
-- slide-countdown: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/countdown/CHANGELOG.md))
-- slide-gif: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/gif/CHANGELOG.md))
-- slide-playground: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/playground/CHANGELOG.md))
-- slide-poll: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/poll/CHANGELOG.md))
-- slide-qrcode: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-split: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-- slide-title: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/title/CHANGELOG.md))
-- slide-video: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/video/CHANGELOG.md))
-- slide-youtube: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Web Components
-
-- charts: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- color: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- core: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- demo: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/demo/CHANGELOG.md))
-- drag-resize-rotate: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/drag-resize-rotate/CHANGELOG.md))
-- highlight-code: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- math: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/math/CHANGELOG.md))
-- qrcode: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-- remote: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- social: v3.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/social/CHANGELOG.md))
-- youtube: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/youtube/CHANGELOG.md))
-
-### Others
-
-- cli: v1.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cli/CHANGELOG.md))
-- gatsby-remark-highlight-code: v2.0.0 ([CHANGELOG](https://github.com/deckgo/gatsby-remark-highlight-code/blob/master/CHANGELOG.md))
-- starter kit: v4.0.0 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- studio kit: v4.0.0 ([CHANGELOG](https://github.com/deckgo/studio-kit/blob/master/CHANGELOG.md))
-
-<a name="2.2.0"></a>
-
-# [2.2.0](https://github.com/deckgo/deckdeckgo/compare/v2.1.0...v2.2.0) (2020-08-17)
-
-### Applications
-
-- demo: v2.4.2 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- docs: v1.9.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.6.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v2.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.2.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- color: v2.1.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- highlight-code: v1.1.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v2.0.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-
-### Others
-
-- deck-utils: v2.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- utils: v1.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-- starter kit: v2.6.4 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-
-<a name="2.1.0"></a>
-
-# [2.1.0](https://github.com/deckgo/deckdeckgo/compare/v2.0.0...v2.1.0) (2020-07-30)
-
-Announcing **DeckDeckGo for Enterprise**, another kind of editor for your company's presentations.
-
-Easily apply your corporate identity and design across all your company’s presentations. Secure distribution and maintenance.
-
-[More information, features and contact](https://deckdeckgo.com/enterprise).
-
-### Applications
-
-- docs: v1.7.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- studio: v2.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- color: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-
-<a name="2.0.0"></a>
-
-# [2.0.0](https://github.com/deckgo/deckdeckgo/compare/v1.5.0...v2.0.0) (2020-07-23)
-
-### Breaking Changes
-
-Because we are introducing the `header` and `footer` features, slots in the templates `gif` and `aspect-ratio` had to be renamed to avoid name collision.
-
-Therefore, if you would edit such templates with our editor or developer kit, created before these releases, these modifications have to be performed in your content.
-
-Ping [me](mailto:david.dalbusco@outlook.com) if you need any help or have questions.
-
-Best regards,
-
-David
-
-### Applications
-
-- demo: v2.4.0 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- docs: v1.7.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.6.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components Templates
-
-- slide-aspect-ratio: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/aspect-ratio/CHANGELOG.md))
-- slide-author: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/author/CHANGELOG.md))
-- slide-big-img: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/big-img/CHANGELOG.md))
-- slide-chart: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-code: v1.2.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/code/CHANGELOG.md))
-- slide-content: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/content/CHANGELOG.md))
-- slide-countdown: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/countdown/CHANGELOG.md))
-- slide-gif: v2.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/gif/CHANGELOG.md))
-- slide-playground: v1.1.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/playground/CHANGELOG.md))
-- slide-poll: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/poll/CHANGELOG.md))
-- slide-qrcode: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-split: v1.3.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-- slide-title: v1.1.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/title/CHANGELOG.md))
-- slide-video: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/video/CHANGELOG.md))
-- slide-youtube: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- drag-resize-rotate: v1.1.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/drag-resize-rotate/CHANGELOG.md))
-- highlight-code: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.5.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- social: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/social/CHANGELOG.md))
-
-### Others
-
-- deck-utils: v2.3.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- gatsby-remark-highlight-code: v1.4.4 ([CHANGELOG](https://github.com/deckgo/gatsby-remark-highlight-code/blob/master/CHANGELOG.md))
-- slide-utils: v2.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- starter kit: v2.6.2 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
+- re-hydrate editor with prerendering ([#797](https://github.com/deckgo/deckdeckgo/pull/797))
+- recursively cleanSync Firestore FieldValue.delete ([#807](https://github.com/deckgo/deckdeckgo/pull/807) and [#806](https://github.com/deckgo/deckdeckgo/pull/806))
+- improve dashboard navigation and style ([#788](https://github.com/deckgo/deckdeckgo/pull/788))
+- use user store to create author slide ([#787](https://github.com/deckgo/deckdeckgo/pull/787))
+- code editable attribute was sometimes missing ([#784](https://github.com/deckgo/deckdeckgo/pull/784))
 
 <a name="1.5.0"></a>
 
-# [1.5.0](https://github.com/deckgo/deckdeckgo/compare/v1.4.0...v1.5.0) (2020-07-02)
+# 1.5.0 (2020-07-02)
 
-### Applications
+### Features
 
-- docs: v1.6.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.5.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v1.5.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+- use @stencil/store instead of rxjs ([#773](https://github.com/deckgo/deckdeckgo/issues/773))
+- web app shortcuts ([#766](https://github.com/deckgo/deckdeckgo/pull/766))
+- use Google Font "Open Sans" for the editor ([#772](https://github.com/deckgo/deckdeckgo/pull/772))
+- at least four slides needed to make a published deck appear in feed ([#776](https://github.com/deckgo/deckdeckgo/pull/776))
+- remove random color and background when creating a new deck ([#777](https://github.com/deckgo/deckdeckgo/pull/777))
+- wider deck style menu popover ([#778](https://github.com/deckgo/deckdeckgo/pull/778))
 
-### Web Components
+### Fix
 
-- remote: v1.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
+- grammar mistake on app-landing-deck.tsx ([#775](https://github.com/deckgo/deckdeckgo/pull/775))
 
 <a name="1.4.0"></a>
 
-# [1.4.0](https://github.com/deckgo/deckdeckgo/compare/v1.3.0...v1.4.0) (2020-06-25)
+# 1.4.0 (2020-06-25)
 
-### Applications
+### Features
 
-- demo: v2.3.0 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- docs: v1.6.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v1.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+- support copepen, jsfiddle and webcomponents.dev ([#721](https://github.com/deckgo/deckdeckgo/issues/721))
+- refresh style of the actions in full screen mode ([#755](https://github.com/deckgo/deckdeckgo/pull/755))
+- group, improve fonts in deck style and keep popover open on editing ([#745](https://github.com/deckgo/deckdeckgo/pull/745))
+- add strikethrough option ([#710](https://github.com/deckgo/deckdeckgo/issues/710))
+- illustrations for the landing page ([#764](https://github.com/deckgo/deckdeckgo/pull/764))
+- highlight code line numbers background and color ([#763](https://github.com/deckgo/deckdeckgo/pull/763))
+- improve deck li style ([#761](https://github.com/deckgo/deckdeckgo/pull/761))
 
-### Web Components: New Templates
+### Fix
 
-- slide-playground: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/playground/CHANGELOG.md))
-- slide-split: v1.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-
-### Web Components
-
-- highlight-code: v1.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-
-### Web Components: Templates
-
-- slide-qrcode: v1.0.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-
-### Others
-
-- cloud: v1.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cloud/CHANGELOG.md))
-- deck-utils: v2.3.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- gatsby-remark-highlight-code: v1.4.1 ([CHANGELOG](https://github.com/deckgo/gatsby-remark-highlight-code/blob/master/CHANGELOG.md))
-- starter kit: v2.5.2 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
+- prerendering 🚀 ([#675](https://github.com/deckgo/deckdeckgo/issues/675))
+- share doesn't work in Firefox ([#751](https://github.com/deckgo/deckdeckgo/issues/751))
+- problem with remote control layout in Firefox Mobile ([#752](https://github.com/deckgo/deckdeckgo/issues/752))
+- QR code sizing/spacing ([#743](https://github.com/deckgo/deckdeckgo/issues/743))
+- social card image not generated ([#659](https://github.com/deckgo/deckdeckgo/issues/659))
 
 <a name="1.3.0"></a>
 
-# [1.3.0](https://github.com/deckgo/deckdeckgo/compare/v1.2.0...v1.3.0) (2020-05-28)
+# 1.3.0 (2020-05-28)
 
-### Applications
+### Features
 
-- docs: v1.4.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.2.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v1.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+- theming for the carbon terminal to showcase your code ([#733](https://github.com/deckgo/deckdeckgo/issues/733))
+- select as popover for a quicker access ([#738](https://github.com/deckgo/deckdeckgo/pull/738))
 
-### Web Components
+### UX
 
-- highlight-code: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
+- improve onboarding by adding a mini wizard to the create slide process ([#729](https://github.com/deckgo/deckdeckgo/pull/729))
+- bring all actions together in two distinct groups: style or options ([#742](https://github.com/deckgo/deckdeckgo/pull/742) and [#744](https://github.com/deckgo/deckdeckgo/pull/744))
 
-### Web Components: Templates
+### Fix
 
-- slide-code: v1.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/code/CHANGELOG.md))
-
-### Others
-
-- gatsby-remark-highlight-code: v1.4.0 ([CHANGELOG](https://github.com/deckgo/gatsby-remark-highlight-code/blob/master/CHANGELOG.md))
-- starter kit: v2.4.0 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
+- support offline access to the editor directly with the browser's url ([#734](https://github.com/deckgo/deckdeckgo/pull/734))
+- handle background Firestore Field.delete when going offline ([#735](https://github.com/deckgo/deckdeckgo/pull/735))
+- Chrome requires two clicks to focus element if pseudo CSS is being used ([#739](https://github.com/deckgo/deckdeckgo/pull/739))
 
 <a name="1.2.0"></a>
 
-# [1.2.0](https://github.com/deckgo/deckdeckgo/compare/v1.1.0...v1.2.0) (2020-07-15)
+# 1.2.0 (2020-05-15)
 
-### Applications
+### Features
 
-- docs: v1.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v1.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+- integration `math` component ([#622](https://github.com/deckgo/deckdeckgo/issues/622))
+- colors should have a name description (a11y, [#544](https://github.com/deckgo/deckdeckgo/issues/544))
+- replace "toggle" with "transform" ([#731](https://github.com/deckgo/deckdeckgo/pull/731))
 
-### Web Components: New
+### Fix
 
-- math: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/math/CHANGELOG.md))
-
-### Web Components: Update
-
-- charts: v1.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- color: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- core: v1.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- demo: v1.0.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/demo/CHANGELOG.md))
-- drag-resize-rotate: v1.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/drag-resize-rotate/CHANGELOG.md))
-- highlight-code: v1.0.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.3.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- qrcode: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-- remote: v1.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- social: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/social/CHANGELOG.md))
-- youtube: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/youtube/CHANGELOG.md))
-
-### Web Components Templates
-
-- slide-aspect-ratio: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/aspect-ratio/CHANGELOG.md))
-- slide-author: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/author/CHANGELOG.md))
-- slide-big-img: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/big-img/CHANGELOG.md))
-- slide-chart: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-code: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/code/CHANGELOG.md))
-- slide-content: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/content/CHANGELOG.md))
-- slide-countdown: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/countdown/CHANGELOG.md))
-- slide-gif: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/gif/CHANGELOG.md))
-- slide-poll: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/poll/CHANGELOG.md))
-- slide-qrcode: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-split: v1.1.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-- slide-title: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/title/CHANGELOG.md))
-- slide-video: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/video/CHANGELOG.md))
-- slide-youtube: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Others
-
-- deck-utils: v2.3.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- starter kit: v2.3.0 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
+- preserve card and image ratio on feed ([#727](https://github.com/deckgo/deckdeckgo/pull/727))
 
 <a name="1.1.0"></a>
 
-# [1.1.0](https://github.com/deckgo/deckdeckgo/compare/v1.0.0...v1.1.0) (2020-07-08)
+# 1.1.0 (2020-05-08)
 
-### Applications
+### Features
 
-- demo: v2.2.0 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- docs: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
+- showcase interacted apps and websites in presentations ([#715](https://github.com/deckgo/deckdeckgo/issues/715))
+- add "Studio" as a PWA to Google Play ([#687](https://github.com/deckgo/deckdeckgo/issues/687))
+- deck font review ([#713](https://github.com/deckgo/deckdeckgo/pull/713))
+- `font-weight: 700` for h1 and h2 ([#704](https://github.com/deckgo/deckdeckgo/issues/704))
 
-### Web Components: New
+### Fix
 
-- demo: v1.0.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/demo/CHANGELOG.md))
-
-### Web Components: Update
-
-- highlight-code: v1.0.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- youtube: v1.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/youtube/CHANGELOG.md))
-
-### Web Components Templates
-
-- slide-split: v1.1.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-
-### Others
-
-- deck-utils: v2.2.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- slide-utils: v1.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- starter kit: v2.2.0 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
+- load images and charts in dashboard ([#717](https://github.com/deckgo/deckdeckgo/pull/717))
+- alignment fonts in split template ([#716](https://github.com/deckgo/deckdeckgo/pull/716))
 
 <a name="1.0.0"></a>
 
-# [1.0.0](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.22-1...v1.0.0) (2019-04-21)
-
-### Applications
-
-- demo: v2.0.1 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- docs: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- charts: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- color: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- core: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- drag-resize-rotate: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/drag-resize-rotate/CHANGELOG.md))
-- highlight-code: v1.0.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.1.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- qrcode: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-- remote: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- social: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/social/CHANGELOG.md))
-- youtube: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/youtube/CHANGELOG.md))
-
-### Web Components Templates
-
-- slide-aspect-ratio: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/aspect-ratio/CHANGELOG.md))
-- slide-author: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/author/CHANGELOG.md))
-- slide-big-img: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/big-img/CHANGELOG.md))
-- slide-chart: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-code: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/code/CHANGELOG.md))
-- slide-content: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/content/CHANGELOG.md))
-- slide-countdown: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/countdown/CHANGELOG.md))
-- slide-gif: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/gif/CHANGELOG.md))
-- slide-poll: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/poll/CHANGELOG.md))
-- slide-qrcode: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-split: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-- slide-title: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/title/CHANGELOG.md))
-- slide-video: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/video/CHANGELOG.md))
-- slide-youtube: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Others
-
-- backend: v2.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/backend/CHANGELOG.md))
-- cli: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cli/CHANGELOG.md))
-- cloud: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cloud/CHANGELOG.md))
-- deck-utils: v1.0.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- remote-utils: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/remote/CHANGELOG.md))
-- slide-utils: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- starter kit: v2.0.1 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- types: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
-- utils: v1.1.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-- webpack: v1.0.0 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webpack/CHANGELOG.md))
-
-<a name="1.0.0-rc.21-1"></a>
-
-# [1.0.0-rc.21-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.21...v1.0.0-rc.21-1) (2020-03-09)
-
-### Applications
-
-- studio: v1.0.0-beta.12-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- charts: v1.0.0-rc.6-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- drag-resize-rotate: v1.0.0-beta.3-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/drag-resize-rotate/CHANGELOG.md))
-
-### Others
-
-- deck-utils: v1.0.0-rc.3-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-
-<a name="1.0.0-rc.21"></a>
-
-# [1.0.0-rc.21](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.20...v1.0.0-rc.21) (2020-02-27)
-
-### New: Web Components
-
-- drag-resize-rotate: v1.0.0-beta.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/drag-resize-rotate/CHANGELOG.md))
-- slide-aspect-ratio: v1.0.0-beta.1-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/aspect-ratio/CHANGELOG.md))
-
-### New: Others
-
-- remote-utils: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/remote/CHANGELOG.md))
-
-### Applications
-
-- studio: v1.0.0-beta.12 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- demo: v1.0.0-rc.5-1 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-- docs: v1.0.0-rc.10-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0-rc.3-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-
-### Web Components
-
-- highlight-code: v1.0.0-rc.3-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- lazy-img: v1.0.0-rc.3-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- remote: v1.0.0-rc.6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-
-### Others
-
-- deck-utils: v1.0.0-rc.3-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- starter kit: v1.0.0-rc.8 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- types: v1.0.0-rc.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
-- utils: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-
-<a name="1.0.0-rc.20"></a>
-
-# [1.0.0-rc.20](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.19...v1.0.0-rc.20) (2020-01-20)
-
-### Applications
-
-- studio: v1.0.0-beta.11 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- docs: v1.0.0-rc.9-5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0-rc.2-6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- demo: v1.0.0-rc.4-9 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-
-### New: Web Components
-
-- social: v1.0.0-rc.1-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/social/CHANGELOG.md))
-- youtube: v1.0.0-rc.1-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/youtube/CHANGELOG.md))
-
-### Web Components
-
-- charts: v1.0.0-rc.6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- core: v1.0.0-rc.3-5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- color: v1.0.0-rc.3-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- lazy-img: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- slide-author: v1.0.0-rc.3-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/author/CHANGELOG.md))
-- slide-chart: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-youtube: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Others
-
-- cloud: v1.0.0-rc.3-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cloud/CHANGELOG.md))
-- deck-utils: v1.0.0-rc.2-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- starter kit: v1.0.0-rc.6-9 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-
-<a name="1.0.0-rc.19"></a>
-
-# [1.0.0-rc.19](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.18...v1.0.0-rc.19) (2019-12-13)
-
-### Applications
-
-- studio: v1.0.0-beta.10 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- docs: v1.0.0-rc.8-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0-rc.2-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- demo: v1.0.0-rc.4-4 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-
-### Web Components
-
-- color: v1.0.0-rc.3-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- core: v1.0.0-rc.3-4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v1.0.0-rc.2-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.0.0-rc.3-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v1.0.0-rc.2-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-
-### Others
-
-- starter kit: v1.0.0-rc.6-4 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-
-<a name="1.0.0-rc.18"></a>
-
-# [1.0.0-rc.18](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.17...v1.0.0-rc.18) (2019-12-04)
-
-### Applications
-
-- studio: v1.0.0-beta.9 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- docs: v1.0.0-rc.7 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-
-### New: Web Components
-
-- slide-poll: v1.0.0-beta.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/poll/CHANGELOG.md))
-
-### Web Components
-
-- charts: v1.0.0-rc.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- core: v1.0.0-rc.2-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- color: v1.0.0-rc.3-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- lazy-img: v1.0.0-rc.2-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- slide-chart: v1.0.0-rc.2-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- remote: v1.0.0-rc.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- slide-youtube: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Others
-
-- backend: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/backend/CHANGELOG.md))
-- deck-utils: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- starter kit: v1.0.0-rc.5-1 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- utils: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-- slide-utils: v1.0.0-rc.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- types: v1.0.0-rc.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
-
-<a name="1.0.0-rc.17"></a>
-
-# [1.0.0-rc.17](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.16-1...v1.0.0-rc.17) (2019-11-10)
-
-### Applications
-
-- studio: v1.0.0-beta.8 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- docs: v1.0.0-rc.6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- demo: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- remote: v1.0.0-rc.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- slide-youtube: v1.0.0-rc.1-4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Others
-
-- cloud: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cloud/CHANGELOG.md))
-- deck-utils: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/deck/CHANGELOG.md))
-- slide-utils: v1.0.0-rc.3-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- starter kit: v1.0.0-rc.5 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- types: v1.0.0-rc.4-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
-- utils: v1.0.0-rc.1-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-- infra: update NodeJS 10 and starter kit
-
-<a name="1.0.0-rc.16-1"></a>
-
-# [1.0.0-rc.16-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.16...v1.0.0-rc.16-1) (In progress)
-
-### Applications
-
-- studio: v1.0.0-beta.7-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- highlight-code: v1.0.0-rc.1-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-
-### Others
-
-- starter kit: v1.0.0-rc.4-2 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-
-<a name="1.0.0-rc.16"></a>
-
-# [1.0.0-rc.16](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.15...v1.0.0-rc.16) (2019-10-20)
-
-### Applications
-
-- studio: v1.0.0-beta.7 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- docs: v1.0.0-rc.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- inline-editor: v1.0.0-rc.3-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- charts: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- color: v1.0.0-rc.2-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- slide-chart: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-qrcode: v1.0.0-rc.2-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-split: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-
-### Others
-
-- starter kit: v1.0.0-rc.4-1 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-
-<a name="1.0.0-rc.15"></a>
-
-# [1.0.0-rc.15](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.14-2...v1.0.0-rc.15) (2019-10-07)
-
-### Applications
-
-- studio: v1.0.0-beta.6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- docs: v1.0.0-rc.4-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- inline-editor: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- color: v1.0.0-rc.2-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- core: v1.0.0-rc.1-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- qrcode: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-- slide-qrcode: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-video: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/video/CHANGELOG.md))
-- slide-youtube: v1.0.0-rc.1-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Others
-
-- slide-utils: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- starter kit: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- webpack: v1.0.0-rc.2-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webpack/CHANGELOG.md))
-
-<a name="1.0.0-rc.14-2"></a>
-
-# [1.0.0-rc.14-2](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.14-1...v1.0.0-rc.14-2) (2019-09-23)
-
-### Applications
-
-- studio: v1.0.0-beta.5-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-<a name="1.0.0-rc.14-1"></a>
-
-# [1.0.0-rc.14-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.14...v1.0.0-rc.14-1) (2019-09-21)
-
-### Applications
-
-- docs: v1.0.0-rc.3-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- studio: v1.0.0-beta.5-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- color: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-- inline-editor: v1.0.0-rc.2-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-
-<a name="1.0.0-rc.14"></a>
-
-# [1.0.0-rc.14](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.13...v1.0.0-rc.14) (2019-09-21)
-
-### New: Web Components
-
-- color: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/color/CHANGELOG.md))
-
-### Applications
-
-- docs: v1.0.0-rc.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- studio: v1.0.0-beta.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- inline-editor: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-
-### Others
-
-- utils: v1.0.0-rc.1-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-
-<a name="1.0.0-rc.13"></a>
-
-# [1.0.0-rc.13](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.12-3...v1.0.0-rc.13) (2019-09-20)
-
-### Applications
-
-- studio: v1.0.0-beta.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-<a name="1.0.0-rc.12-3"></a>
-
-# [1.0.0-rc.12-3](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.12-2...v1.0.0-rc.12-3) (2019-09-15)
-
-### Applications
-
-- docs: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- studio: v1.0.0-beta.3-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- remote: v1.0.0-beta.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- website: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-
-### New: Web Components
-
-- slide-video: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/video/CHANGELOG.md))
-- slide-big-img: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/big-img/CHANGELOG.md))
-
-### Web Components
-
-- remote: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- slide-youtube: v1.0.0-rc.1-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Others
-
-- types: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
-- starter kit: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- slide-utils: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-
-<a name="1.0.0-rc.12-2"></a>
-
-# [1.0.0-rc.12-2](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.12-1...v1.0.0-rc.12-2) (2019-09-13)
-
-### Applications
-
-- docs: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Others
-
-- webpack: v1.0.0-rc.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webpack/CHANGELOG.md))
-
-<a name="1.0.0-rc.12-1"></a>
-
-# [1.0.0-rc.12-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.12...v1.0.0-rc.12-1) (2019-09-09)
-
-### Applications
-
-- studio: v1.0.0-beta.3-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- highlight-code: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- slide-gif: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/gif/CHANGELOG.md))
-
-<a name="1.0.0-rc.12"></a>
-
-# [1.0.0-rc.12](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.11-2...v1.0.0-rc.12) (2019-09-08)
-
-### Applications
-
-- studio: v1.0.0-beta.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Others
-
-- cloud: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cloud/CHANGELOG.md))
-
-<a name="1.0.0-rc.11-2"></a>
-
-# [1.0.0-rc.11-2](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.11-1...v1.0.0-rc.11-2) (2019-09-04)
-
-### Web Components
-
-- core: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-### Applications
-
-- website: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-
-### Others
-
-- starter kit: v1.0.0-rc.1-3 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-
-<a name="1.0.0-rc.11-1"></a>
-
-# [1.0.0-rc.11-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.11...v1.0.0-rc.11-1) (2019-09-02)
-
-### Others
-
-- starter kit: v1.0.0-rc.1-2 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- webpack: v1.0.0-rc.1-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webpack/CHANGELOG.md))
-
-<a name="1.0.0-rc.11"></a>
-
-# [1.0.0-rc.11](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.10...v1.0.0-rc.11) (2019-09-01)
-
-### Applications
-
-- studio: v1.0.0-beta.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-
-### Web Components
-
-- inline-editor: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-
-### Others
-
-- utils: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-
-<a name="1.0.0-rc.10"></a>
-
-# [1.0.0-rc.10](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-rc.9...v1.0.0-rc.10) (2019-08-30)
-
-### BREAKING: Web Components
-
-- core: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- utils: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-
-### Applications
-
-- docs: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0-beta.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- studio: v1.0.0-beta.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/studio/CHANGELOG.md))
-- website: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/demo/blob/master/CHANGELOG.md))
-
-### Web Components
-
-- charts: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- highlight-code: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- qrcode: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-- remote: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- types: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
-
-### New: Web Components
-
-- slide-author: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/author/CHANGELOG.md))
-- slide-chart: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/chart/CHANGELOG.md))
-- slide-code: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/code/CHANGELOG.md))
-- slide-content: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/content/CHANGELOG.md))
-- slide-countdown: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/countdown/CHANGELOG.md))
-- slide-gif: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/gif/CHANGELOG.md))
-- slide-qrcode: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/qrcode/CHANGELOG.md))
-- slide-split: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/split/CHANGELOG.md))
-- slide-utils: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/slide/CHANGELOG.md))
-- slide-youtube: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/templates/youtube/CHANGELOG.md))
-
-### Others
-
-- cli: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/cli/CHANGELOG.md))
-- starter kit: v1.0.0-rc.1 ([CHANGELOG](https://github.com/deckgo/starter-kit/blob/master/CHANGELOG.md))
-- webpack: v1.0.0-rc.1-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webpack/CHANGELOG.md))
-
-### Note
-
-The first users began to test, and to create content in, our web open source editor for presentations. Therefore the beta releases of the monorepo are discontinued in favor of the release candidates 🚀
-
-<a name="1.0.0-beta.55"></a>
-
-# [1.0.0-beta.55](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.54-2...v1.0.0-beta.55) (2019-08-15)
-
-### BREAKING: Web Components
-
-- core: v1.0.0-beta.46 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-### Applications
-
-- docs: v1.0.0-alpha.25 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- highlight-code: v1.0.0-alpha.19 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.0.0-alpha.14 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-
-<a name="1.0.0-beta.54-2"></a>
-
-# [1.0.0-beta.54-2](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.54-1...v1.0.0-beta.54-2) (2019-08-09)
-
-### Applications
-
-- docs: v1.0.0-alpha.24-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- highlight-code: v1.0.0-alpha.18 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.0.0-alpha.13 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-
-<a name="1.0.0-beta.54-1"></a>
-
-# [1.0.0-beta.54-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.54...v1.0.0-beta.54-1) (2019-08-07)
-
-### Web Components
-
-- core: v1.0.0-beta.45-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-<a name="1.0.0-beta.54"></a>
-
-# [1.0.0-beta.54](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.53-1...v1.0.0-beta.54) (2019-08-07)
-
-### Applications
-
-- docs: v1.0.0-alpha.24 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- lazy-img: v1.0.0-alpha.12 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-
-<a name="1.0.0-beta.53-1"></a>
-
-# [1.0.0-beta.53-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.53...v1.0.0-beta.53-1) (2019-08-06)
-
-### Applications
-
-- docs: v1.0.0-alpha.23-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-beta.45-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-<a name="1.0.0-beta.53"></a>
-
-# [1.0.0-beta.53](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.52-3...v1.0.0-beta.53) (2019-08-06)
-
-### Applications
-
-- docs: v1.0.0-alpha.23 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-beta.45 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- inline-editor: v1.0.0-alpha.12 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v1.0.0-alpha.11 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-
-<a name="1.0.0-beta.52-3"></a>
-
-# [1.0.0-beta.52-3](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.52-2...v1.0.0-beta.52-3) (2019-07-30)
-
-### Web Components
-
-- highlight-code: v1.0.0-alpha.17-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-
-<a name="1.0.0-beta.52-2"></a>
-
-# [1.0.0-beta.52-2](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.52-1...v1.0.0-beta.52-2) (2019-07-30)
-
-### Applications
-
-- docs: v1.0.0-alpha.22-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- highlight-code: v1.0.0-alpha.17-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-
-<a name="1.0.0-beta.52-1"></a>
-
-# [1.0.0-beta.52-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.52...v1.0.0-beta.52-1) (2019-07-30)
-
-### Web Components
-
-- highlight-code: v1.0.0-alpha.17-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-
-<a name="1.0.0-beta.52"></a>
-
-# [1.0.0-beta.52](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.51-2...v1.0.0-beta.52) (2019-07-30)
-
-### Applications
-
-- docs: v1.0.0-alpha.22 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-beta.44 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v1.0.0-alpha.17 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.0.0-alpha.11 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-
-<a name="1.0.0-beta.51-2"></a>
-
-# [1.0.0-beta.51-2](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.51-1...v1.0.0-beta.51-2) (2019-07-19)
-
-### Web Components
-
-- core: v1.0.0-beta.43 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-<a name="1.0.0-beta.51-1"></a>
-
-# [1.0.0-beta.51-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.51...v1.0.0-beta.51-1) (2019-07-18)
-
-### Web Components
-
-- core: v1.0.0-beta.42 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-<a name="1.0.0-beta.51"></a>
-
-# [1.0.0-beta.51](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.50...v1.0.0-beta.51) (2019-07-17)
-
-### Applications
-
-- docs: v1.0.0-alpha.21 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- lazy-img: v1.0.0-alpha.10 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-
-<a name="1.0.0-beta.50"></a>
-
-# [1.0.0-beta.50](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.49...v1.0.0-beta.50) (2019-07-13)
-
-### Applications
-
-- docs: v1.0.0-alpha.20 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-<a name="1.0.0-beta.49"></a>
-
-# [1.0.0-beta.49](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.48-1...v1.0.0-beta.49) (2019-07-11)
-
-### Applications
-
-- docs: v1.0.0-alpha.19 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- qrcode: v1.0.0-alpha.9 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-
-<a name="1.0.0-beta.48-1"></a>
-
-# [1.0.0-beta.48-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.48...v1.0.0-beta.48-1) (2019-07-06)
-
-### Web Components
-
-- lazy-img: v1.0.0-alpha.9 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-
-<a name="1.0.0-beta.48"></a>
-
-# [1.0.0-beta.48](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.47...v1.0.0-beta.48) (2019-06-27)
-
-### Applications
-
-- docs: v1.0.0-alpha.18 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-beta.41 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-- lazy-img: v1.0.0-alpha.8 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-
-<a name="1.0.0-beta.47"></a>
-
-# [1.0.0-beta.47](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.46-3...v1.0.0-beta.47) (2019-06-24)
-
-### Applications
-
-- docs: v1.0.0-alpha.17 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-beta.40 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- charts: v1.0.0-alpha.8 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-
-<a name="1.0.0-beta.46-3"></a>
-
-# [1.0.0-beta.46-3](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.46-2...v1.0.0-beta.46-3) (2019-06-16)
-
-### Applications
-
-- docs: v1.0.0-alpha.16 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-beta.39-3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-<a name="1.0.0-beta.46-2"></a>
-
-# [1.0.0-beta.46-2](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.46-1...v1.0.0-beta.46-2) (2019-06-16)
-
-### Web Components
-
-- core: v1.0.0-beta.39-2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-<a name="1.0.0-beta.46-1"></a>
-
-# [1.0.0-beta.46-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.46...v1.0.0-beta.46-1) (2019-06-14)
-
-### Web Components
-
-- core: v1.0.0-beta.39-1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-<a name="1.0.0-beta.46"></a>
-
-# [1.0.0-beta.46](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.45...v1.0.0-beta.46) (2019-06-14)
-
-### Applications
-
-- docs: v1.0.0-alpha.15 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-beta.39 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-<a name="1.0.0-beta.45"></a>
-
-# [1.0.0-beta.45](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.44...v1.0.0-beta.45) (2019-06-09)
-
-### Applications
-
-- docs: v1.0.0-alpha.14 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-
-### Web Components
-
-- inline-editor: v1.0.0-alpha.10 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-
-<a name="1.0.0-beta.44"></a>
-
-# [1.0.0-beta.44](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.43...v1.0.0-beta.44) (2019-06-06)
-
-### Applications
-
-- docs: v1.0.0-alpha.13 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0-alpha.12 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-beta.38 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-
-<a name="1.0.0-beta.43"></a>
-
-# [1.0.0-beta.43](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.42...v1.0.0-beta.43) (2019-06-04)
-
-### Applications
-
-- docs: v1.0.0-alpha.12 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0-alpha.11 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-
-### Web Components
-
-- charts: v1.0.0-alpha.7 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- core: v1.0.0-beta.37 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v1.0.0-alpha.16 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.0.0-alpha.9 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v1.0.0-alpha.6 and v1.0.0-alpha.7 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- qrcode: v1.0.0-alpha.8 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-- remote: v1.0.0-alpha.11 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- types: v1.0.0-alpha.11 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
-- utils: v1.0.0-alpha.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/utils/CHANGELOG.md))
-
-<a name="1.0.0-beta.42"></a>
-
-# [1.0.0-beta.42](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.41...v1.0.0-beta.42) (2019-05-30)
-
-### Web Components - First release
-
-- utils: v1.0.0-alpha.1 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
-
-### Web Components
-
-- core: v1.0.0-beta.36 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- inline-editor: v1.0.0-alpha.8 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v1.0.0-alpha.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-
-### Applications
-
-- docs: v1.0.0-alpha.11 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
-- remote: v1.0.0-alpha.10 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-
-<a name="1.0.0-beta.41"></a>
-
-# [1.0.0-beta.41](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.40-2...v1.0.0-beta.41) (2019-05-26)
-
-### BREAKING: Web Components - Org scoped packages
-
-- types: v1.0.0-alpha.10 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
-
-### Web Components
-
-- remote: v1.0.0-alpha.10 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-
-### Applications
-
-- remote: v1.0.0-alpha.9 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-
-<a name="1.0.0-beta.40-2"></a>
-
-# [1.0.0-beta.40-2](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.40-1...v1.0.0-beta.40-2) (2019-05-24)
+# 1.0.0 (2020-04-21)
+
+To infinity and beyond 🚀
+
+### Features
+
+- offline mode ([#653](https://github.com/deckgo/deckdeckgo/issues/653))
+- four new Google Fonts available ([#660](https://github.com/deckgo/deckdeckgo/issues/660))
+- grand access to presentation through remote control ([#67](https://github.com/deckgo/deckdeckgo/issues/67))
+- add option to align left/center/right ([#702](https://github.com/deckgo/deckdeckgo/pull/702))
+- list ordered and unordered toggle to match new UX (#[703](https://github.com/deckgo/deckdeckgo/pull/703))
+- template "split" vertical text alignment ([#679](https://github.com/deckgo/deckdeckgo/issues/679))
+- `text-transform: none;` for all buttons ([#665](https://github.com/deckgo/deckdeckgo/issues/665))
+- update about page ([#674](https://github.com/deckgo/deckdeckgo/pull/674))
 
 ### Fix
 
-- lazy-img: v1.0.0-alpha.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
+- sign in button not accessible via keyboard only on settings page ([#673](https://github.com/deckgo/deckdeckgo/issues/673))
+- two H1 headings on settings page ([#671](https://github.com/deckgo/deckdeckgo/issues/671))
 
-<a name="1.0.0-beta.40-1"></a>
+<a name="1.0.0-beta.12-1"></a>
 
-# [1.0.0-beta.40-1](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.40...v1.0.0-beta.40-1) (2019-05-24)
+# 1.0.0-beta.12-1 (2020-03-09)
 
 ### Fix
 
-- core: v1.0.0-beta.35 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
+- rotation miscalculated on first click (drag, drop and resize)
+- spacing around social logo on the "author" template
 
-<a name="1.0.0-beta.40"></a>
+<a name="1.0.0-beta.12"></a>
 
-# [1.0.0-beta.40](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.39...v1.0.0-beta.40) (2019-05-24)
+# 1.0.0-beta.12 (2020-02-27)
+
+### Features
+
+- new template to "draw" schemes with shapes and images while maintaining the same aspect ratio across devices ([#610](https://github.com/deckgo/deckdeckgo/issues/610))
+- full rethinking of the accessibility of the editor actions to improve the understanding of the `deck > slide > element` concept ([#612](https://github.com/deckgo/deckdeckgo/issues/612))
+- navigation bar design improvements ([#646](https://github.com/deckgo/deckdeckgo/pull/646) and [#616](https://github.com/deckgo/deckdeckgo/issues/616))
+- drag arrows over the presentation through the remote control ([#625](https://github.com/deckgo/deckdeckgo/issues/625))
+- highlight code optionally displayed in an Ubuntu Terminal ([#623](https://github.com/deckgo/deckdeckgo/issues/623))
+- new design for the templates' showcase ([#636](https://github.com/deckgo/deckdeckgo/pull/636) and [#647](https://github.com/deckgo/deckdeckgo/pull/647))
+- remove editor popover backdrops ([#635](https://github.com/deckgo/deckdeckgo/pull/635))
+- remove label "Beta" in navigation bar ([#645](https://github.com/deckgo/deckdeckgo/pull/645))
+- search bar for code languages ([#389](https://github.com/deckgo/deckdeckgo/issues/389))
+- add prettier to all components, apps and utils ([#470](https://github.com/deckgo/deckdeckgo/issues/470))
+- tag info may be updated ([#603](https://github.com/deckgo/deckdeckgo/issues/603))
+- new variable box-shadow for lazy-img component ([#606](https://github.com/deckgo/deckdeckgo/pull/606))
+- add social share to Hacker News ([#618](https://github.com/deckgo/deckdeckgo/issues/618))
+- Ionic v5, Ionicons v5 and color scheme ([#614](https://github.com/deckgo/deckdeckgo/issues/614))
+- style the popover to select slide in the starter kit ([#493](https://github.com/deckgo/deckdeckgo/issues/493))
+- add a small box-shadow around the edited deck ([#642(https://github.com/deckgo/deckdeckgo/pull/642)
+
+### Fix
 
-### BREAKING: Web Components - Org scoped packages
+- jump to slide was prevented by our CSP ([#609](https://github.com/deckgo/deckdeckgo/issues/609))
+- sign in button not reachable with keyboard only ([#534](https://github.com/deckgo/deckdeckgo/issues/534))
+- missing style for editor popover info in code color ([#633](https://github.com/deckgo/deckdeckgo/pull/633))
 
-- charts: v1.0.0-alpha.6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/charts/CHANGELOG.md))
-- core: v1.0.0-beta.34 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- highlight-code: v1.0.0-alpha.15 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.0.0-alpha.7 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- lazy-img: v1.0.0-alpha.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
-- qrcode: v1.0.0-alpha.7 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/qrcode/CHANGELOG.md))
-- remote: v1.0.0-alpha.9 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
+<a name="1.0.0-beta.11"></a>
 
-### Applications
+# 1.0.0-beta.11 (2020-01-20)
 
-- docs: v1.0.0-alpha.10 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
+### Features
 
-<a name="1.0.0-beta.39"></a>
+- Google Fonts for the presentations ([#245](https://github.com/deckgo/deckdeckgo/issues/245))
+- private assets ([#585](https://github.com/deckgo/deckdeckgo/issues/585))
+- clone decks ([#582](https://github.com/deckgo/deckdeckgo/issues/582))
+- landing page ([#561](https://github.com/deckgo/deckdeckgo/issues/561))
+- share and embed presentations anywhere ([#359](https://github.com/deckgo/deckdeckgo/issues/359))
+- prevent javascript in input field with CSP rules ([#497](https://github.com/deckgo/deckdeckgo/issues/497))
+- in db, delete deck attributes instead of keep null values ([#587](https://github.com/deckgo/deckdeckgo/issues/587))
+- improve Youtube embed for play and pause ([#569](https://github.com/deckgo/deckdeckgo/pull/569))
+- load studio with the background color set to the color once loaded ([#567](https://github.com/deckgo/deckdeckgo/pull/567))
+- extract component `<deckgo-youtube/>` ([#565](https://github.com/deckgo/deckdeckgo/issues/565))
+- add new design options to slide "author" ([#558](https://github.com/deckgo/deckdeckgo/issues/558))
+- show handles in author slide ([#424](https://github.com/deckgo/deckdeckgo/issues/424))
+- add canvas desynchronized option ([#437](https://github.com/deckgo/deckdeckgo/issues/437))
+- ping on dack published ([#547](https://github.com/deckgo/deckdeckgo/pull/547))
 
-# [1.0.0-beta.39](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.38...v1.0.0-beta.39) (2019-05-18)
+### Accessibility
 
-### Web Components
+- toolbar options have no focus state ([#536](https://github.com/deckgo/deckdeckgo/issues/536))
+- swipe slide with tabs ([#581](https://github.com/deckgo/deckdeckgo/issues/581))
+- main menu has not enough contrast ([#554](https://github.com/deckgo/deckdeckgo/issues/554))
+- remote control text is not readable ([#545](https://github.com/deckgo/deckdeckgo/issues/545))
+- add issue templates for issues and pull requests ([#533](https://github.com/deckgo/deckdeckgo/issues/533) and [#546](https://github.com/deckgo/deckdeckgo/pull/546))
+- presentations should have better naming ([#535](https://github.com/deckgo/deckdeckgo/issues/535))
+- remove beta from urls ([#542](https://github.com/deckgo/deckdeckgo/pull/542))
+- links should have different styling (to distinguish from emphasised text) ([#537](https://github.com/deckgo/deckdeckgo/issues/537))
 
-- lazy-img: v1.0.0-alpha.2 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
+### Fix
 
-### Applications
+- remove list of presentations from side menu ([#588](https://github.com/deckgo/deckdeckgo/issues/588))
+- navigation button padding-start incorrect ([#584](https://github.com/deckgo/deckdeckgo/issues/584))
+- add poll question to list of slides on "jump to slide" ([#598](https://github.com/deckgo/deckdeckgo/issues/598))
+- replace all platform icons with local icons ([#563](https://github.com/deckgo/deckdeckgo/issues/563))
+- svg are't lazy loaded in browser which support native loading ([#575](https://github.com/deckgo/deckdeckgo/issues/575))
+- screenshot not generated anymore ([#548](https://github.com/deckgo/deckdeckgo/issues/548))
+- correct typo noscript ([#539](https://github.com/deckgo/deckdeckgo/pull/539))
 
-- docs: v1.0.0-alpha.9 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
+<a name="1.0.0-beta.10"></a>
 
-<a name="1.0.0-beta.38"></a>
+# 1.0.0-beta.10 (2019-12-04)
 
-# [1.0.0-beta.38](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.37...v1.0.0-beta.38) (2019-05-16)
+### Breaking Changes
 
-### Web Components
+- code elements displayed per default as stylish cards with syntax highlighting ([#525](https://github.com/deckgo/deckdeckgo/issues/525))
 
-- lazy-img: a brand new dead simple Web Component to lazy load images 🎉 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/lazy-img/CHANGELOG.md))
+### Features
 
-- core: v1.0.0-beta.33 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- inline-editor: v1.0.0-alpha.6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
+- select the transition style of the animation between your slides ([#57](https://github.com/deckgo/deckdeckgo/issues/57))
+- improve the accessibility options of the deck by moving the style to a separate popover ([#520](https://github.com/deckgo/deckdeckgo/issues/520))
+- move color options for the code to the specific color options pane. this unify the UX of the color options ([#394](https://github.com/deckgo/deckdeckgo/issues/394))
+- invert order of information and inputs on the voting page to avoid the input being under the keyboard on iOS ([#518](https://github.com/deckgo/deckdeckgo/issues/518))
 
-### Applications
+### Fix
 
-- docs: v1.0.0-alpha.8 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
+- `lazy-img` component wasn't displaying svg anymore ([#532](https://github.com/deckgo/deckdeckgo/pull/532))
+- if action are disabled, events on toolbar buttons should be blocked too ([#522](https://github.com/deckgo/deckdeckgo/pull/522))
+- code typo as popover are `HTMLIonPopoverElement` ([#523](https://github.com/deckgo/deckdeckgo/pull/523))
 
-<a name="1.0.0-beta.37"></a>
+<a name="1.0.0-beta.9"></a>
 
-# [1.0.0-beta.37](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.36...v1.0.0-beta.37) (2019-04-30)
+# 1.0.0-beta.9 (2019-12-04)
 
-### Web Components
+### Features
 
-- highlight-code: v1.0.0-alpha.14 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
+- interact with your audience with a **live poll** ([#471](interact with your audience))
+- dark and light mode theme switcher ([#445](https://github.com/deckgo/deckdeckgo/issues/445))
+- hide pager in fullscreen mode on mouse inactivity ([#494](https://github.com/deckgo/deckdeckgo/issues/494))
+- size of the video element improved ([#492](https://github.com/deckgo/deckdeckgo/issues/492))
+- display smoothly lazy loaded loaded images ([#508](https://github.com/deckgo/deckdeckgo/issues/508))
+- improve developer documentation grammar ([#506](https://github.com/deckgo/deckdeckgo/pull/506) | [#505](https://github.com/deckgo/deckdeckgo/pull/505) | [#504](https://github.com/deckgo/deckdeckgo/pull/504))
+- improve contributing guide grammar ([#502](https://github.com/deckgo/deckdeckgo/pull/502))
+- color picker better highlight ([#488](https://github.com/deckgo/deckdeckgo/issues/488))
+- confirm slides delete ([#478](https://github.com/deckgo/deckdeckgo/issues/478))
+- add an information page about the remote control ([#477](https://github.com/deckgo/deckdeckgo/pull/477))
+- fetch more cards on the main feed (each steps) ([#476](https://github.com/deckgo/deckdeckgo/pull/476))
 
-### Applications
+### Fix
 
-- docs: v1.0.0-alpha.7 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
+- notes not hidden on template `split` ([#472](https://github.com/deckgo/deckdeckgo/issues/472))
+- QR code URL `DECKDECKGO_BASE_HREF` wasn't updated ([#490](https://github.com/deckgo/deckdeckgo/issues/490))
+- reset deck background color doesn't work ([#479](https://github.com/deckgo/deckdeckgo/issues/479))
+- support click in input type file ([#474](https://github.com/deckgo/deckdeckgo/issues/474))
 
-<a name="1.0.0-beta.36"></a>
+<a name="1.0.0-beta.8-1"></a>
 
-# [1.0.0-beta.36](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.35...v1.0.0-beta.36) (2019-04-30)
+# 1.0.0-beta.8-1 (2019-11-13)
 
-### Web Components
+### Features
 
-- core: v1.0.0-beta.32 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
+- fetch more cards on the main feed ([#476](https://github.com/deckgo/deckdeckgo/pull/476))
 
-<a name="1.0.0-beta.35"></a>
+### Fix
 
-# [1.0.0-beta.35](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.34...v1.0.0-beta.35) (2019-04-30)
+- fix notes displayed on template split ([#472](https://github.com/deckgo/deckdeckgo/issues/472))
+- Firefox and Safari doesn't support click in input type file ([#474](https://github.com/deckgo/deckdeckgo/issues/474))
 
-### Web Components
+<a name="1.0.0-beta.8"></a>
 
-- highlight-code: v1.0.0-alpha.13 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
-- inline-editor: v1.0.0-alpha.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
+# 1.0.0-beta.8 (2019-11-10)
 
-### Applications
+### Features
 
-- docs: v1.0.0-alpha.6 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
+- add notes to the editor ([#247](https://github.com/deckgo/deckdeckgo/issues/247))
+- rework UX and design of the remote controller ([#228](https://github.com/deckgo/deckdeckgo/issues/228))
+- sync and display deck and slides content ([#450](https://github.com/deckgo/deckdeckgo/issues/450))
+- close remote connect modal on successful connection with the remote ([#464](https://github.com/deckgo/deckdeckgo/pull/464))
+- refactor deprecated Ionic controllers ([#454](https://github.com/deckgo/deckdeckgo/issues/454))
+- move utils, types and slides-utils to new package utils ([#453](https://github.com/deckgo/deckdeckgo/issues/453))
 
-<a name="1.0.0-beta.34"></a>
+### Fix
 
-# [1.0.0-beta.34](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.33...v1.0.0-beta.34) (2019-04-19)
+- if modal open, arrow key should not be interpreted ([#443](https://github.com/deckgo/deckdeckgo/issues/443))
+- clear draw doesn't clear history ([#452](https://github.com/deckgo/deckdeckgo/issues/452))
 
-### Web Components
+<a name="1.0.0-beta.7-1"></a>
 
-- core: v1.0.0-beta.31 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
+# 1.0.0-beta.7-1 (2019-10-21)
 
-<a name="1.0.0-beta.33"></a>
+### Features
 
-# [1.0.0-beta.33](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.32...v1.0.0-beta.33) (2019-04-18)
+- add split template vertical ([#408](https://github.com/deckgo/deckdeckgo/issues/408))
 
-### Applications
+### Fix
 
-- remote: v1.0.0-alpha.8 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/remote/CHANGELOG.md))
-- docs: v1.0.0-alpha.5 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
+- per-line highlight is wrong unless "display line numbers" is set ([#423](https://github.com/deckgo/deckdeckgo/issues/423))
 
-### Web Components
+<a name="1.0.0-beta.7"></a>
 
-- core: v1.0.0-beta.30 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
-- inline-editor: 1.0.0-alpha.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
-- remote: v1.0.0-alpha.8 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
-- types: v1.0.0-alpha.9 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/utils/types/CHANGELOG.md))
+# 1.0.0-beta.7 (2019-10-20)
 
-<a name="1.0.0-beta.32"></a>
+### Features
 
-# [1.0.0-beta.32](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.31...v1.0.0-beta.32) (2019-04-14)
+- integrate template chart ([#400](https://github.com/deckgo/deckdeckgo/issues/400))
+- add call to action "create a presentation" ([#411](https://github.com/deckgo/deckdeckgo/issues/411))
+- expose studio configuration for contributors ([#413](https://github.com/deckgo/deckdeckgo/pull/413))
+- add a dummy press kit page ([#409](https://github.com/deckgo/deckdeckgo/pull/409))
+- display tags and hide title on cards of the main feed ([#371](https://github.com/deckgo/deckdeckgo/issues/371))
 
-### Web Components
+### Fix
 
-- remote: v1.0.0-alpha.6 & v1.0.0-alpha.7 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/remote/CHANGELOG.md))
+- move slide time to time doesn't work ([#404](https://github.com/deckgo/deckdeckgo/issues/404))
 
-<a name="1.0.0-beta.31"></a>
+<a name="1.0.0-beta.6"></a>
 
-# [1.0.0-beta.31](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.30...v1.0.0-beta.31) (2019-03-08)
+# 1.0.0-beta.6 (2019-10-07)
 
-### Web Components
+### Features
 
-- core: v1.0.0-beta.29 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/core/CHANGELOG.md))
+- integrate template QR code ([#384](https://github.com/deckgo/deckdeckgo/issues/384))
+- add a meta attribute for the display in the feed ([#361](https://github.com/deckgo/deckdeckgo/issues/361))
+- mock api ([#367](https://github.com/deckgo/deckdeckgo/issues/367))
+- background opacity and missing "white" in color picker ([#348](https://github.com/deckgo/deckdeckgo/issues/348))
+- randomize feed ([#374](https://github.com/deckgo/deckdeckgo/issues/374))
+- don't persist "grammarly" injected data ([#376](https://github.com/deckgo/deckdeckgo/issues/376))
 
-<a name="1.0.0-beta.30"></a>
+### Fix
 
-# [1.0.0-beta.30](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.29...v1.0.0-beta.30) (2019-03-07)
+- non latin characters as presentation's name / url ([#385](https://github.com/deckgo/deckdeckgo/issues/385))
 
-### Web Components
+<a name="1.0.0-beta.5-2"></a>
 
-- inline editor: v1.0.0-alpha.3 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/inline-editor/CHANGELOG.md))
+# 1.0.0-beta.5-2 (2019-09-23)
 
-### Others
+### Features
 
-- docs: v1.0.0-alpha.4 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/docs/CHANGELOG.md))
+- use new color picker for code ([#353](https://github.com/deckgo/deckdeckgo/issues/353))
+- improve tags spacing
 
-<a name="1.0.0-beta.29"></a>
+### Fix
 
-# [1.0.0-beta.29](https://github.com/deckgo/deckdeckgo/compare/v1.0.0-beta.28...v1.0.0-beta.29) (2019-03-03)
+- missing "description" in the published presentation ([#351](https://github.com/deckgo/deckdeckgo/issues/351))
+- trim deck name when publishing (as it is use as room name for the remote control)
 
-### Web Components
+<a name="1.0.0-beta.5-1"></a>
 
-- highlight-code: v1.0.0-alpha.12 ([CHANGELOG](https://github.com/deckgo/deckdeckgo/blob/main/webcomponents/highlight-code/CHANGELOG.md))
+# 1.0.0-beta.5-1 (2019-09-21)
 
-#### Notes
+### Fix
 
-This CHANGELOG lists the tags applied on the all repo respectively the releases of the all [DeckDeckGo](https://github.com/deckgo/deckdeckgo/releases) mono-repo.
+- inline editor color and link on sticky mobile devices
 
-For more details about the particular release of a component, an app, the documentation or the infrastructure, checkout their corresponding CHANGELOG.
+<a name="1.0.0-beta.5"></a>
+
+# 1.0.0-beta.5 (2019-09-21)
+
+### Features
+
+- use a custom color picker to select and apply colors which still offers the platform's picker as extra choice ([#260](https://github.com/deckgo/deckdeckgo/issues/260))
+- hide fullscreen and platform's color picker on iPad ([#347](https://github.com/deckgo/deckdeckgo/issues/347))
+
+<a name="1.0.0-beta.4"></a>
+
+# 1.0.0-beta.4 (2019-09-20)
+
+### Breaking Changes
+
+- publish api v2 ([#341](https://github.com/deckgo/deckdeckgo/issues/341))
+
+### Features
+
+- copy slides ([#313](https://github.com/deckgo/deckdeckgo/issues/313))
+- add twitter meta information to published presentations ([#332](https://github.com/deckgo/deckdeckgo/issues/332))
+- add "dashboard" link in left pane menu ([#330](https://github.com/deckgo/deckdeckgo/pull/330))
+
+### Fix
+
+- firebase not defined on slide delete ([#329](https://github.com/deckgo/deckdeckgo/pull/329))
+
+<a name="1.0.0-beta.3-2"></a>
+
+# 1.0.0-beta.3-2 (2019-09-15)
+
+### Refactoring
+
+- remote event `youtube_pause` renamed to `pause`
+
+<a name="1.0.0-beta.3-1"></a>
+
+# 1.0.0-beta.3-1 (2019-09-09)
+
+### Fix
+
+- workaround to resize `ion-app`
+- highlight lines of code in Chrome
+
+<a name="1.0.0-beta.3"></a>
+
+# 1.0.0-beta.3 (2019-09-08)
+
+### Breaking changes
+
+- use uid as storage root folder instead of username (as the username could change) ([#310](https://github.com/deckgo/deckdeckgo/issues/310) and [#319](https://github.com/deckgo/deckdeckgo/issues/319))
+
+### Features
+
+- on the dashboard, add new actions to delete presentations on demand ([#314](https://github.com/deckgo/deckdeckgo/issues/314) and [#322](https://github.com/deckgo/deckdeckgo/issues/322))
+- delete decks, slides and storage when user delete his/her account ([#310](https://github.com/deckgo/deckdeckgo/issues/310))
+- add a contributing documentation page ([#304](https://github.com/deckgo/deckdeckgo/issues/304))
+- in studio and starter, align text center ([#293](https://github.com/deckgo/deckdeckgo/issues/293))
+- caret color ([#285](https://github.com/deckgo/deckdeckgo/issues/285))
+- improve tags style ([#324](https://github.com/deckgo/deckdeckgo/issues/324))
+
+### Fix
+
+- change username not resolving and clearing its value ([#298](https://github.com/deckgo/deckdeckgo/issues/298))
+- reflect slide deletion to the publishing ([#243](https://github.com/deckgo/deckdeckgo/issues/243))
+- weird publishing issue ([#289](https://github.com/deckgo/deckdeckgo/issues/289))
+- delete header and footer on `<deckgo-slide-gif/>` template ([#307](https://github.com/deckgo/deckdeckgo/issues/307))
+- word "hydrated" couldn't be used in a presetnation ([#302](https://github.com/deckgo/deckdeckgo/issues/302))
+- twitter url typo ([#297](https://github.com/deckgo/deckdeckgo/issues/297))
+- don't persist `deckgo-reveal-list` status ([#295](https://github.com/deckgo/deckdeckgo/pull/295))
+- toggle full screen using the keyboard "Escape" key ([#287](https://github.com/deckgo/deckdeckgo/issues/287))
+
+<a name="1.0.0-beta.2"></a>
+
+# 1.0.0-beta.2 (2019-08-30)
+
+### Features
+
+- display presentation name instead of "DeckDeckGo beta" ([#248](https://github.com/deckgo/deckdeckgo/issues/248))
+- sort deck with "updated_at" ([#249](https://github.com/deckgo/deckdeckgo/issues/249))
+- highlight selected element ([#250](https://github.com/deckgo/deckdeckgo/issues/250))
+- tagging completes on pause, not on enter ([#256](https://github.com/deckgo/deckdeckgo/issues/256))
+- improve images public notice ([#261](https://github.com/deckgo/deckdeckgo/issues/261))
+- fullscreen open to presentation mode ([#263](https://github.com/deckgo/deckdeckgo/issues/263))
+
+### Fix
+
+- inline-editor: tools appearing on continuing selection ([#280](https://github.com/deckgo/deckdeckgo/issues/280))
+- slide-youtube: if I reload a presentation's youtube page, it's xmas ([#262](https://github.com/deckgo/deckdeckgo/issues/262))
+- first slide saved in previous deck ([#254](https://github.com/deckgo/deckdeckgo/issues/254))
+- element image converted in code ([#259](https://github.com/deckgo/deckdeckgo/issues/259))
+
+<a name="1.0.0-beta.1"></a>
+
+# 1.0.0-beta.1 (2019-08-30)
+
+- to infinity and beyond 🚀

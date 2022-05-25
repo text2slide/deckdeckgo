@@ -1,49 +1,97 @@
 {
-  "name": "deckdeckgo",
-  "version": "7.1.0",
-  "author": "David Dal Busco",
-  "description": "The web open source editor for presentations",
-  "private": true,
-  "scripts": {
-    "ic:install:data": "node canisters/scripts/ic.installcode.mjs",
-    "ic:types": "node ./canisters/scripts/ic.types.js",
-    "build": "npm run ic:types && cd studio && npm run build:ic",
-    "postbuild": "prettier --write providers/ic"
-  },
-  "workspaces": [
-    "providers/*",
-    "webcomponents/*",
-    "templates/*",
-    "utils/*"
-  ],
-  "devDependencies": {
-    "@stencil/core": "^2.14.0",
-    "@stencil/postcss": "^2.1.0",
-    "@stencil/sass": "^1.5.2",
-    "@types/jest": "^26.0.24",
-    "@types/puppeteer": "5.4.4",
-    "autoprefixer": "^10.3.4",
-    "esbuild": "^0.14.10",
-    "husky": "^7.0.4",
-    "jest": "^27.4.7",
-    "jest-cli": "^27.4.7",
-    "node-fetch": "^3.1.1",
-    "prettier": "^2.5.1",
-    "prettier-plugin-organize-imports": "^2.3.4",
-    "pretty-quick": "^3.1.3",
-    "puppeteer": "^13.1.3",
-    "typescript": "^4.4.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/deckgo/deckdeckgo.git"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
-  "dependencies": {
-    "@deckdeckgo/utils": "file:utils/utils"
-  }
+	"name": "deckdeckgo-studio",
+	"version": "5.2.0",
+	"author": "David Dal Busco",
+	"description": "The web open source editor for presentations",
+	"license": "AGPL-3.0-or-later",
+	"files": [
+		"dist/"
+	],
+	"scripts": {
+		"clean": "node ./scripts/rm-www.js",
+		"i18n": "node ./scripts/i18n.types.js",
+		"prebuild": "npm run clean && npm run i18n",
+		"prestart": "npm run i18n",
+		"build": "stencil build",
+		"build:staging": "npm run build -- --staging",
+		"build:ic": "npm run build -- --ic",
+		"postbuild": "./scripts/postbuild.js",
+		"start": "stencil build --dev --watch --serve",
+		"start:staging": "stencil build --dev --watch --serve --staging",
+		"test": "stencil test --spec --e2e",
+		"test.watch": "stencil test --spec --e2e --watch"
+	},
+	"dependencies": {
+		"@deckdeckgo/charts": "^2.3.0",
+		"@deckdeckgo/color": "^4.1.0",
+		"@deckdeckgo/core": "^9.0.0",
+		"@deckdeckgo/deck-utils": "^6.0.0",
+		"@deckdeckgo/drag-resize-rotate": "^2.2.1",
+		"@deckdeckgo/editor": "^5.1.1",
+		"@deckdeckgo/elements": "^1.0.0",
+		"@deckdeckgo/highlight-code": "^3.4.2",
+		"@deckdeckgo/inline-editor": "^5.0.0",
+		"@deckdeckgo/laser-pointer": "^1.1.0",
+		"@deckdeckgo/lazy-img": "^3.2.0",
+		"@deckdeckgo/markdown": "^2.1.0",
+		"@deckdeckgo/math": "^2.1.0",
+		"@deckdeckgo/remote": "^2.2.0",
+		"@deckdeckgo/slide-aspect-ratio": "^3.4.0",
+		"@deckdeckgo/slide-author": "^2.4.0",
+		"@deckdeckgo/slide-chart": "^2.5.0",
+		"@deckdeckgo/slide-content": "^2.5.0",
+		"@deckdeckgo/slide-gif": "^3.4.0",
+		"@deckdeckgo/slide-playground": "^2.4.0",
+		"@deckdeckgo/slide-poll": "^2.4.0",
+		"@deckdeckgo/slide-qrcode": "^2.4.0",
+		"@deckdeckgo/slide-split": "^2.4.0",
+		"@deckdeckgo/slide-title": "^2.4.0",
+		"@deckdeckgo/slide-utils": "^4.0.3",
+		"@deckdeckgo/slide-youtube": "^2.4.0",
+		"@deckdeckgo/social-img": "^1.1.0",
+		"@deckdeckgo/utils": "^3.1.0",
+		"@deckdeckgo/word-cloud": "^1.2.0",
+		"@ionic/core": "^5.9.1",
+		"html2canvas": "^1.4.1",
+		"idb-keyval": "^6.0.3",
+		"jszip": "^3.7.1",
+		"pptxgenjs": "^3.9.0",
+		"socket.io-client": "2.3.1",
+		"uuid": "^8.3.2",
+		"web-social-share": "^8.0.0"
+	},
+	"devDependencies": {
+		"@deckdeckgo/styles": "^1.2.2",
+		"@deckdeckgo/types": "^2.0.1",
+		"@rollup/plugin-replace": "^3.0.0",
+		"@stencil/core": "^2.9.0",
+		"@stencil/postcss": "^2.1.0",
+		"@stencil/sass": "^1.5.2",
+		"@stencil/store": "^1.5.0",
+		"@types/node": "^17.0.22",
+		"@types/resize-observer-browser": "^0.1.6",
+		"@types/socket.io-client": "1.4.34",
+		"@types/uuid": "^8.3.1",
+		"@types/wicg-file-system-access": "^2020.9.4",
+		"autoprefixer": "^10.3.7",
+		"prettier": "^2.4.1",
+		"workbox-build": "5.1.4"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/deckgo/deckdeckgo.git",
+		"directory": "studio"
+	},
+	"keywords": [
+		"ionic",
+		"stencil",
+		"stenciljs",
+		"web components",
+		"pwa",
+		"progressive web app",
+		"presentation",
+		"slides",
+		"slideshow",
+		"talk"
+	]
 }

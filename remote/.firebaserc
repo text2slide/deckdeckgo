@@ -1,6 +1,0 @@
-{
-  "projects": {
-    "default": "deckdeckgo-app",
-    "staging": "deckdeckgo-app-beta"
-  }
-}

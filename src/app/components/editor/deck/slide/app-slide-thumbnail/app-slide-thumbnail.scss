@@ -1,0 +1,32 @@
+@use '../../../../../../global/theme/mixins/editor';
+@use '../../../../../../global/theme/mixins/deck';
+
+app-slide-thumbnail {
+	display: block;
+	position: relative;
+
+	width: var(--preview-width, 200px);
+	height: calc(var(--preview-width, 200px) * 9 / 16);
+	min-height: calc(var(--preview-width, 200px) * 9 / 16);
+	margin-bottom: 16px;
+	border-radius: 4px;
+
+	@media screen and (max-width: 768px) {
+		--preview-width: 128px;
+	}
+
+	overflow: hidden;
+
+	@include editor.panel;
+
+	deckgo-deck {
+		pointer-events: none;
+		@include deck.padding;
+
+		width: 1086px;
+		height: calc(1086px * 9 / 16);
+		min-height: calc(1086px * 9 / 16);
+		transform: scale(0.15);
+		transform-origin: left top;
+	}
+}

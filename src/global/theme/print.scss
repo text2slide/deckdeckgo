@@ -1,0 +1,56 @@
+@media print {
+	@page {
+		size: A4 landscape;
+		margin: 0mm 0mm 0mm 0mm;
+	}
+
+	* {
+		-webkit-print-color-adjust: exact;
+	}
+
+	body {
+		position: relative;
+		background: transparent;
+		overflow: visible;
+		// font-size: 0.46em;
+	}
+
+	app-root.hidden {
+		display: none;
+	}
+
+	deckgo-lazy-img {
+		-webkit-print-color-adjust: exact; /* Chrome, Safari, Edge */
+		color-adjust: exact;
+	}
+
+	app-deck-editor#print {
+		visibility: inherit !important;
+		display: block;
+		> *:not(deckgo-deck) {
+			display: none;
+		}
+	}
+}
+
+body > app-deck-editor {
+	&#print {
+		visibility: hidden;
+	}
+
+	&#ppt {
+		visibility: inherit !important;
+		display: block;
+		position: relative;
+		left: 9999px;
+		top: 0px;
+
+		> *:not(deckgo-deck) {
+			visibility: hidden;
+		}
+
+		> deckgo-deck {
+			position: absolute;
+		}
+	}
+}

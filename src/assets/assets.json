@@ -1,0 +1,526 @@
+{
+	"shapes": {
+		"shapes": [
+			{
+				"src": "/img/shapes/ppwork-polygon-4.svg",
+				"ariaLabel": "Square"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-4.svg",
+				"ariaLabel": "Square outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-polygon-4-round.svg",
+				"ariaLabel": "Square round"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-4-round.svg",
+				"ariaLabel": "Square round outlined"
+			},
+			{ "src": "/img/shapes/ppwork-circle.svg", "ariaLabel": "Circle" },
+			{
+				"src": "/img/shapes/ppwork-outlined-circle.svg",
+				"ariaLabel": "Circle outlined"
+			},
+			{ "src": "/img/shapes/ppwork-polygon-3.svg", "ariaLabel": "Triangle" },
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-3.svg",
+				"ariaLabel": "Triangle outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-polygon-3-right.svg",
+				"ariaLabel": "Right triangle"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-3-right.svg",
+				"ariaLabel": "Right triangle outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-polygon-diamond.svg",
+				"ariaLabel": "Diamnd"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-diamond.svg",
+				"ariaLabel": "Diamnd outlined"
+			},
+			{ "src": "/img/shapes/ppwork-polygon-5.svg", "ariaLabel": "Polygon 5" },
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-5.svg",
+				"ariaLabel": "Polygon 5 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-polygon-6.svg", "ariaLabel": "Polygon 6" },
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-6.svg",
+				"ariaLabel": "Polygon 6 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-polygon-7.svg", "ariaLabel": "Polygon 7" },
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-7.svg",
+				"ariaLabel": "Polygon 7 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-polygon-8.svg", "ariaLabel": "Polygon 8" },
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-8.svg",
+				"ariaLabel": "Polygon 8 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-polygon-10.svg", "ariaLabel": "Polygon 10" },
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-10.svg",
+				"ariaLabel": "Polygon 10 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-polygon-12.svg", "ariaLabel": "Polygon 12" },
+			{
+				"src": "/img/shapes/ppwork-outlined-polygon-12.svg",
+				"ariaLabel": "Polygon 12 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-pie-3-4.svg", "ariaLabel": "3/4 Pie" },
+			{
+				"src": "/img/shapes/ppwork-outlined-pie-3-4.svg",
+				"ariaLabel": "3/4 Pie outlined"
+			},
+			{ "src": "/img/shapes/ppwork-pie-1-4.svg", "ariaLabel": "1/4 Pie" },
+			{
+				"src": "/img/shapes/ppwork-outlined-pie-1-4.svg",
+				"ariaLabel": "1/4 Pie outlined"
+			},
+			{ "src": "/img/shapes/ppwork-cube.svg", "ariaLabel": "Cube" },
+			{
+				"src": "/img/shapes/ppwork-outlined-cube.svg",
+				"ariaLabel": "Cube outlined"
+			},
+			{ "src": "/img/shapes/ppwork-note.svg", "ariaLabel": "Note" },
+			{
+				"src": "/img/shapes/ppwork-outlined-note.svg",
+				"ariaLabel": "Note outlined"
+			},
+			{ "src": "/img/shapes/ppwork-cylinder.svg", "ariaLabel": "Cylinder" },
+			{
+				"src": "/img/shapes/ppwork-outlined-cylinder.svg",
+				"ariaLabel": "Cylinder outlined"
+			},
+			{ "src": "/img/shapes/ppwork-explode.svg", "ariaLabel": "Explode" },
+			{
+				"src": "/img/shapes/ppwork-outlined-explode.svg",
+				"ariaLabel": "Explode outlined"
+			},
+			{ "src": "/img/shapes/ppwork-star-4.svg", "ariaLabel": "Star 4" },
+			{
+				"src": "/img/shapes/ppwork-outlined-star-4.svg",
+				"ariaLabel": "Star 4 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-star-5.svg", "ariaLabel": "Star 5" },
+			{
+				"src": "/img/shapes/ppwork-outlined-star-5.svg",
+				"ariaLabel": "Star 5 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-star-6.svg", "ariaLabel": "Star 6" },
+			{
+				"src": "/img/shapes/ppwork-outlined-star-6.svg",
+				"ariaLabel": "Star 6 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-star-7.svg", "ariaLabel": "Star 7" },
+			{
+				"src": "/img/shapes/ppwork-outlined-star-7.svg",
+				"ariaLabel": "Star 7 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-star-8.svg", "ariaLabel": "Star 8" },
+			{
+				"src": "/img/shapes/ppwork-outlined-star-8.svg",
+				"ariaLabel": "Star 8 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-star-10.svg", "ariaLabel": "Star 10" },
+			{
+				"src": "/img/shapes/ppwork-outlined-star-10.svg",
+				"ariaLabel": "Star 10 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-star-12.svg", "ariaLabel": "Star 12" },
+			{
+				"src": "/img/shapes/ppwork-outlined-star-12.svg",
+				"ariaLabel": "Star 12 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-star-16.svg", "ariaLabel": "Star 16" },
+			{
+				"src": "/img/shapes/ppwork-outlined-star-16.svg",
+				"ariaLabel": "Star 16 outlined"
+			},
+			{ "src": "/img/shapes/ppwork-math-plus.svg", "ariaLabel": "Plus" },
+			{
+				"src": "/img/shapes/ppwork-outlined-math-plus.svg",
+				"ariaLabel": "Plus outlined"
+			},
+			{ "src": "/img/shapes/ppwork-math-minus.svg", "ariaLabel": "Minus" },
+			{
+				"src": "/img/shapes/ppwork-outlined-math-minus.svg",
+				"ariaLabel": "Minus outlined"
+			},
+			{ "src": "/img/shapes/ppwork-math-times.svg", "ariaLabel": "Times" },
+			{
+				"src": "/img/shapes/ppwork-outlined-math-times.svg",
+				"ariaLabel": "Times outlined"
+			},
+			{ "src": "/img/shapes/ppwork-math-devide.svg", "ariaLabel": "Devide" },
+			{
+				"src": "/img/shapes/ppwork-outlined-math-devide.svg",
+				"ariaLabel": "Devide outlined"
+			},
+			{ "src": "/img/shapes/ppwork-math-equal.svg", "ariaLabel": "Equal" },
+			{
+				"src": "/img/shapes/ppwork-outlined-math-equal.svg",
+				"ariaLabel": "Equal outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-brackets-square.svg",
+				"ariaLabel": "Square brackets"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-brackets-curly.svg",
+				"ariaLabel": "Curly brackets"
+			}
+		],
+		"arrows": [
+			{
+				"src": "/img/shapes/ppwork-arrow-right.svg",
+				"ariaLabel": "Arrow right"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-arrow-right.svg",
+				"ariaLabel": "Arrow right outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-arrow-left.svg",
+				"ariaLabel": "Arrow left"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-arrow-left.svg",
+				"ariaLabel": "Arrow left outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-arrow-up.svg",
+				"ariaLabel": "Arrow up"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-arrow-up.svg",
+				"ariaLabel": "Arrow up outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-arrow-down.svg",
+				"ariaLabel": "Arrow down"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-arrow-down.svg",
+				"ariaLabel": "Arrow down outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-arrow-hori.svg",
+				"ariaLabel": "Arrow hori"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-arrow-hori.svg",
+				"ariaLabel": "Arrow hori outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-arrow-verti.svg",
+				"ariaLabel": "Arrow verti"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-arrow-verti.svg",
+				"ariaLabel": "Arrow verti outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-homeplate.svg",
+				"ariaLabel": "Homeplate"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-homeplate.svg",
+				"ariaLabel": "Homeplate outlined"
+			},
+			{
+				"src": "/img/shapes/ppwork-sheld.svg",
+				"ariaLabel": "Sheld"
+			},
+			{
+				"src": "/img/shapes/ppwork-outlined-sheld.svg",
+				"ariaLabel": "Sheld outlined"
+			}
+		],
+		"lines": [
+			{
+				"src": "/img/shapes/ppwork-line.svg",
+				"ariaLabel": "Line"
+			},
+			{
+				"src": "/img/shapes/ppwork-line-arrow.svg",
+				"ariaLabel": "Arrow Line"
+			},
+			{
+				"src": "/img/shapes/ppwork-elbow-line.svg",
+				"ariaLabel": "Elbow Line"
+			},
+			{
+				"src": "/img/shapes/ppwork-elbow-line-arrow.svg",
+				"ariaLabel": "Arrow Elbow Line"
+			}
+		],
+		"status": [
+			{
+				"src": "/img/shapes/check-circle-solid.svg",
+				"ariaLabel": "Check circle solid"
+			},
+			{
+				"src": "/img/shapes/check-circle-regular.svg",
+				"ariaLabel": "Check circle regular"
+			},
+			{
+				"src": "/img/shapes/check-square-solid.svg",
+				"ariaLabel": "Check square solid"
+			},
+			{
+				"src": "/img/shapes/check-square-regular.svg",
+				"ariaLabel": "Check square regular"
+			},
+			{
+				"src": "/img/shapes/times-circle-solid.svg",
+				"ariaLabel": "Times square solid"
+			},
+			{
+				"src": "/img/shapes/times-circle-regular.svg",
+				"ariaLabel": "Times square regular"
+			},
+			{
+				"src": "/img/shapes/plus-circle-solid.svg",
+				"ariaLabel": "Plus circle"
+			},
+			{
+				"src": "/img/shapes/minus-circle-solid.svg",
+				"ariaLabel": "Minus circle"
+			},
+			{
+				"src": "/img/shapes/plus-square-solid.svg",
+				"ariaLabel": "Plus square solid"
+			},
+			{
+				"src": "/img/shapes/plus-square-regular.svg",
+				"ariaLabel": "Plus square regular"
+			},
+			{
+				"src": "/img/shapes/minus-square-solid.svg",
+				"ariaLabel": "Minus square solid"
+			},
+			{
+				"src": "/img/shapes/minus-square-regular.svg",
+				"ariaLabel": "Minus square regular"
+			},
+			{ "src": "/img/shapes/unlock-solid.svg", "ariaLabel": "Unlock" },
+			{ "src": "/img/shapes/lock-solid.svg", "ariaLabel": "Lock" },
+			{ "src": "/img/shapes/info-solid.svg", "ariaLabel": "Info" },
+			{
+				"src": "/img/shapes/info-circle-solid.svg",
+				"ariaLabel": "Info circle"
+			},
+			{ "src": "/img/shapes/check-solid.svg", "ariaLabel": "Check" },
+			{ "src": "/img/shapes/times-solid.svg", "ariaLabel": "Times" },
+			{ "src": "/img/shapes/plus-solid.svg", "ariaLabel": "Plus" },
+			{ "src": "/img/shapes/minus-solid.svg", "ariaLabel": "Minus" },
+			{ "src": "/img/shapes/ban-solid.svg", "ariaLabel": "Ban" }
+		],
+		"computers": [
+			{ "src": "/img/shapes/desktop-solid.svg", "ariaLabel": "Desktop" },
+			{ "src": "/img/shapes/laptop-solid.svg", "ariaLabel": "Laptop" },
+			{ "src": "/img/shapes/tablet-solid.svg", "ariaLabel": "Tablet" },
+			{ "src": "/img/shapes/mobile-solid.svg", "ariaLabel": "Mobile" },
+			{ "src": "/img/shapes/server-solid.svg", "ariaLabel": "Server" },
+			{ "src": "/img/shapes/database-solid.svg", "ariaLabel": "Database" },
+			{ "src": "/img/shapes/download-solid.svg", "ariaLabel": "Download" },
+			{ "src": "/img/shapes/envelope-solid.svg", "ariaLabel": "Envelope" },
+			{ "src": "/img/shapes/power-off-solid.svg", "ariaLabel": "Power off" },
+			{ "src": "/img/shapes/rocket-solid.svg", "ariaLabel": "Rocket" },
+			{ "src": "/img/shapes/robot-solid.svg", "ariaLabel": "Robot" }
+		],
+		"dateTime": [
+			{
+				"src": "/img/shapes/calendar-solid.svg",
+				"ariaLabel": "Calendar solid"
+			},
+			{
+				"src": "/img/shapes/calendar-regular.svg",
+				"ariaLabel": "Calendar regular"
+			},
+			{ "src": "/img/shapes/clock-solid.svg", "ariaLabel": "Clock solid" },
+			{ "src": "/img/shapes/clock-regular.svg", "ariaLabel": "Clock regular" }
+		],
+		"files": [
+			{ "src": "/img/shapes/copy-solid.svg", "ariaLabel": "Copy solid" },
+			{ "src": "/img/shapes/copy-regular.svg", "ariaLabel": "Copy regular" },
+			{
+				"src": "/img/shapes/clipboard-solid.svg",
+				"ariaLabel": "Clipboard solid"
+			},
+			{
+				"src": "/img/shapes/clipboard-regular.svg",
+				"ariaLabel": "Clipboard regular"
+			},
+			{ "src": "/img/shapes/file-solid.svg", "ariaLabel": "File solid" },
+			{ "src": "/img/shapes/file-regular.svg", "ariaLabel": "File regular" },
+			{ "src": "/img/shapes/folder-solid.svg", "ariaLabel": "Folder solid" },
+			{
+				"src": "/img/shapes/folder-regular.svg",
+				"ariaLabel": "Folder regular"
+			},
+			{ "src": "/img/shapes/cut-solid.svg", "ariaLabel": "Cut" }
+		],
+		"finance": [
+			{ "src": "/img/shapes/chart-line-solid.svg", "ariaLabel": "Chart line" },
+			{ "src": "/img/shapes/chart-pie-solid.svg", "ariaLabel": "Chart pie" },
+			{
+				"src": "/img/shapes/credit-card-solid.svg",
+				"ariaLabel": "Credit card solid"
+			},
+			{
+				"src": "/img/shapes/credit-card-regular.svg",
+				"ariaLabel": "Credit card regular"
+			},
+			{
+				"src": "/img/shapes/cc-amazon-pay-brands.svg",
+				"ariaLabel": "Amazon Pay"
+			},
+			{
+				"src": "/img/shapes/cc-apple-pay-brands.svg",
+				"ariaLabel": "Apple Pay"
+			},
+			{ "src": "/img/shapes/cc-paypal-brands.svg", "ariaLabel": "Paypal" },
+			{ "src": "/img/shapes/cc-stripe-brands.svg", "ariaLabel": "Stripe" },
+			{ "src": "/img/shapes/bitcoin-brands.svg", "ariaLabel": "Bitcoin" }
+		]
+	},
+	"gif": {
+		"exampleSrc": "https://media.giphy.com/media/xUA7baWfTjfHGLZc3e/200w_d.gif"
+	},
+	"chart": {
+		"lineSrc": "https://raw.githubusercontent.com/deckgo/deckdeckgo/master/webcomponents/charts/showcase/data-line-chart.csv",
+		"lineCompareSrc": "https://raw.githubusercontent.com/deckgo/deckdeckgo/master/webcomponents/charts/showcase/data-line-chart-to-compare.csv",
+		"lineNoDatesSrc": "https://raw.githubusercontent.com/deckgo/deckdeckgo/master/webcomponents/charts/showcase/data-line-chart-no-dates.csv",
+		"lineMultipleSrc": "https://raw.githubusercontent.com/deckgo/deckdeckgo/master/webcomponents/charts/showcase/data-line-multiple.csv",
+		"pieSrc": "https://raw.githubusercontent.com/deckgo/deckdeckgo/master/webcomponents/charts/showcase/data-pie-chart.csv",
+		"barCompareSrc": "https://raw.githubusercontent.com/deckgo/deckdeckgo/master/webcomponents/charts/showcase/data-bar-chart-to-compare.csv"
+	},
+	"team": {
+		"david": "https://pbs.twimg.com/profile_images/941274539979366400/bTKGkd-O_400x400.jpg",
+		"nicolas": "https://pbs.twimg.com/profile_images/588789970690658305/Ru9JiWks_400x400.png"
+	},
+	"fonts": [
+		{
+			"id": "google-fonts-lora",
+			"name": "Lora",
+			"family": "'Lora', serif"
+		},
+		{
+			"id": "google-fonts-roboto",
+			"name": "Roboto",
+			"family": "'Roboto', sans-serif"
+		},
+		{
+			"id": "google-fonts-open-sans",
+			"name": "Open Sans",
+			"family": "'Open Sans', sans-serif"
+		},
+		{
+			"id": "google-fonts-montserrat",
+			"name": "Montserrat",
+			"family": "'Montserrat', sans-serif"
+		},
+		{
+			"id": "google-fonts-cabin",
+			"name": "Cabin",
+			"family": "'Cabin', sans-serif"
+		},
+		{
+			"id": "google-fonts-lato",
+			"name": "Lato",
+			"family": "'Lato', sans-serif"
+		},
+		{
+			"id": "google-fonts-muli",
+			"name": "Muli",
+			"family": "'Muli', sans-serif"
+		},
+		{
+			"id": "google-fonts-source-sans-pro",
+			"name": "Source Sans Pro",
+			"family": "'Source Sans Pro', sans-serif"
+		},
+		{
+			"id": "google-fonts-libre-baskerville",
+			"name": "Libre Baskerville",
+			"family": "'Libre Baskerville', serif"
+		},
+		{
+			"id": "google-fonts-oswald",
+			"name": "Oswald",
+			"family": "'Oswald', sans-serif"
+		},
+		{
+			"id": "google-fonts-jura",
+			"name": "Jura",
+			"family": "'Jura', sans-serif"
+		},
+		{
+			"id": "google-fonts-fjord-one",
+			"name": "Fjord One",
+			"family": "'Fjord One', serif"
+		},
+		{
+			"id": "google-fonts-josefin-slab",
+			"name": "Josefin Slab",
+			"family": "'Josefin Slab', serif"
+		}
+	],
+	"deckdeckgo": {
+		"logo": "/img/deckdeckgo-logo.svg"
+	},
+	"navigation": [
+		{ "src": "/icons/ionicons/open.svg", "ariaLabel": "Open" },
+		{ "src": "/icons/ionicons/close.svg", "ariaLabel": "Close" },
+		{ "src": "/icons/ionicons/arrow-forward.svg", "ariaLabel": "Forward" },
+		{ "src": "/icons/ionicons/arrow-back.svg", "ariaLabel": "Back" },
+		{ "src": "/icons/ionicons/md-list.svg", "ariaLabel": "List" },
+		{ "src": "/icons/ionicons/list.svg", "ariaLabel": "List" },
+		{ "src": "/icons/ionicons/brush.svg", "ariaLabel": "Brush" },
+		{ "src": "/icons/ionicons/phone-portrait.svg", "ariaLabel": "Phone" },
+		{ "src": "/icons/ionicons/share.svg", "ariaLabel": "Share" },
+		{ "src": "/icons/ionicons/cloud-done.svg", "ariaLabel": "Cloud sync ok" },
+		{
+			"src": "/icons/ionicons/cloud-offline.svg",
+			"ariaLabel": "Cloud sync in error"
+		},
+		{ "src": "/icons/ionicons/sync.svg", "ariaLabel": "Cloud syncing" },
+		{ "src": "/icons/ionicons/help.svg", "ariaLabel": "Help" },
+		{ "src": "/icons/ionicons/ellipsis-vertical.svg", "ariaLabel": "Menu" },
+		{ "src": "/icons/ionicons/contract.svg", "ariaLabel": "Exit Fullscreen" },
+		{ "src": "/icons/ionicons/expand.svg", "ariaLabel": "Enter Fullscreen" },
+		{ "src": "/icons/ionicons/trash-bin.svg", "ariaLabel": "Delete" },
+		{ "src": "/icons/ionicons/create.svg", "ariaLabel": "Notes" },
+		{ "src": "/icons/ionicons/copy.svg", "ariaLabel": "Copy" },
+		{ "src": "/icons/ionicons/color-palette.svg", "ariaLabel": "Color" },
+		{ "src": "/icons/ionicons/add.svg", "ariaLabel": "Add" },
+		{ "src": "/icons/ionicons/shapes.svg", "ariaLabel": "Shapes" },
+		{ "src": "/icons/ionicons/code.svg", "ariaLabel": "Code" },
+		{ "src": "/icons/ionicons/images.svg", "ariaLabel": "Images" },
+		{ "src": "/icons/ionicons/checkmark.svg", "ariaLabel": "Check" },
+		{ "src": "/icons/math.svg", "ariaLabel": "Math" },
+		{ "src": "/icons/word-cloud.svg", "ariaLabel": "Word Cloud" },
+		{ "src": "/icons/ionicons/color-wand.svg", "ariaLabel": "Paint format" },
+		{ "src": "/icons/ionicons/chevron-down.svg", "ariaLabel": "Chevron down" },
+		{ "src": "/icons/ionicons/chevron-back.svg", "ariaLabel": "Chevron back" },
+		{
+			"src": "/icons/ionicons/chevron-forward.svg",
+			"ariaLabel": "Chevron forward"
+		},
+		{ "src": "/icons/ionicons/settings.svg", "ariaLabel": "Settings" },
+		{ "src": "/icons/text.svg", "ariaLabel": "Text" },
+		{ "src": "/icons/ionicons/play.svg", "ariaLabel": "Present" },
+		{ "src": "/icons/ionicons/download.svg", "ariaLabel": "Export" },
+		{ "src": "/icons/ionicons/flask.svg", "ariaLabel": "Transform element" },
+		{ "src": "/icons/ionicons/document.svg", "ariaLabel": "New presentation" },
+		{ "src": "/icons/ionicons/folder-open.svg", "ariaLabel": "Open file" }
+	]
+}

@@ -1,0 +1,16 @@
+ion-button {
+	&.button-solid {
+		--background: white;
+		--color: black;
+		--background-hover: #fea33b;
+		--color-hover: white;
+		--border-radius: 2px;
+		width: 32%;
+		height: 52px;
+		margin: 2px 2px;
+	}
+
+	ion-icon {
+		padding-right: 3px;
+	}
+}
