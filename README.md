@@ -22,6 +22,7 @@
 
 ## Table of contents
 
+- [Table of contents](#table-of-contents)
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [Documentation](#documentation)
@@ -35,6 +36,8 @@
 - [Providers](#providers)
 - [Utils](#utils)
 - [Others](#others)
+- [Config](#config)
+  - [deckdeckgo config](#deckdeckgo-config)
 
 ## Getting Started
 
@@ -167,3 +170,20 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 | **Webpack plugins**              | [`deckdeckgo-webpack-plugins`](https://www.npmjs.com/package/deckdeckgo-webpack-plugins) | [![version](https://img.shields.io/npm/v/deckdeckgo-webpack-plugins/latest.svg?color=success)](https://www.npmjs.com/package/deckdeckgo-webpack-plugins)     |                   [`README`](webpack/README.md)                   |                              [`CHANGELOG`](webpack/CHANGELOG.md)                               |
 
 [deckdeckgo]: https://deckdeckgo.com
+
+## Config
+
+You can adjust some setting in our Config file in src/global/
+
+### deckdeckgo config
+|Key Name| |
+|--------|-|
+|root|Website root|
+|website|Website in QrCode|
+|globalAssetsUrl|global assets path|
+|navigateReloadEditorUrl|website for redirect|
+|pollUrl|poll URL|
+|apiUrl|API URL|
+|socketUrl|websocket URL|
+|delayTime|Time to wait before redirecting to login page|
+|navigateLoginUrl| URL of Login page|
